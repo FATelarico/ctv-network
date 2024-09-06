@@ -101,7 +101,7 @@ Both main packages can compute betweenness, eigenvalue, power, and closeness cen
 
 - `r pkg("centiserve")` adds dozen of centrality measures for `r pkg ("igraph")` objects such as bottleneck, decay, and entropy centrality.
 
-- `r pkg("birankr")` provides optimised functions for estimating various centrality measures in bipartite/two-mode networks.It can also estiamte efficiently page-rank in one-mode networks, project two-mode networks to one-mode ones, and convert edge lists and matrices to the `sparseMatrix` format offered in the package `Matrix`. It supports edge lists (in the `data.frame`, `data.table::data.table`, or `tidydata::tbl_df` class) and adjacency matrices (either in the built-in `matrix` class or in `Matrix`'s `dgCMatrix` class).
+- `r pkg("birankr")` provides optimised functions for estimating various centrality measures in bipartite/two-mode networks. It can also estimate efficiently page-rank in one-mode networks, project two-mode networks to one-mode ones, and convert edge lists and matrices to the `sparseMatrix` format offered in the package `Matrix`. It supports edge lists (in the `data.frame`, `data.table::data.table`, or `tidydata::tbl_df` class) and adjacency matrices (either in the built-in `matrix` class or in `Matrix`'s `dgCMatrix` class).
 
 # Network Modeling & Simulation
 
@@ -120,9 +120,11 @@ This section does not include Bayesian networks and Markov Random-Field models a
 |Small hierarchical ERGMs|`r pkg("lightergm")`|
 |Large hierarchical ERGMs|`r pkg("biergm")`|
 
-- `r pkg("amen")` offer additive and multiplicative effect (AME) models with regression terms, covariance structure of the social relations model (Warner, Kenny and Stoto ([1979](https://doi.org/10.1037/0022-3514.37.10.1742)), and multiplicative factor models (Hoff [2009](https://doi.org/10.1007/s10588-008-9040-4)). It supports  binary networks as well as valued ones (assuming a Gaussian, zero-inflated/tobit, ordinal, or fixed-rank nomination model)
+- `r pkg("amen")` offer additive and multiplicative effect (AME) models with regression terms, covariance structure of the social relations model (Warner, Kenny and Stoto ([1979](https://doi.org/10.1037/0022-3514.37.10.1742)), and multiplicative factor models (Hoff [2009](https://doi.org/10.1007/s10588-008-9040-4)). 
+It supports  binary networks as well as valued ones (assuming a Gaussian, zero-inflated/tobit, ordinal, or fixed-rank nomination model)
 
-- `r pkg("bootnet")` implements bootstrap procedures to assess accuracy and stability of estimated network structures and centrality indices. It works on undirected network only.
+- `r pkg("bootnet")` implements bootstrap procedures to assess accuracy and stability of estimated network structures and centrality indices. 
+It works on undirected network only.
   - For an alternative see `r pkg("localboot")`.
 
 - `r pkg("dyads")` offers functions for the MCMC simulation of dyadic network models j2, p2 (also multilevel) and b2 model.
@@ -153,7 +155,8 @@ The following packages are focused on modeling series of networks, also known as
 
 - `r pkg("tergm")` a set of extensions for `r pkg("ergm")` for fitting and simulating discrete-time models for series of networks (or a long-term equilibrium of a discrete-time network process) where each time step is modeled as a draw from an ERGM conditional on the prior time steps.
 
-- `r pkg("dnr")` estimation of discrete-time models for series of networks where each time-step is modeled as a draw from an ERGM conditional on prior time steps, subject to the constraint that within each time step, edge variables are independent. Varying node sets are also supported.
+- `r pkg("dnr")` estimation of discrete-time models for series of networks where each time-step is modeled as a draw from an ERGM conditional on prior time steps, subject to the constraint that within each time step, edge variables are independent. 
+Varying node sets are also supported.
 
 - `r pkg("btergm")` bootstrap inference for discrete-time models for series of networks where each time step is modeled as a draw from an ERGM conditional on the prior time steps.
 
@@ -168,48 +171,64 @@ Being a flexible method, network analysis is used in a number of fields with spe
 
 - `r pkg("econetwork")` is a collection of advanced functions to analyse and models of ecological networks (mainly food webs and host-parasite relations, but also plant-pollinator and other mutualistic ones) statically and dynamically (based on Ohlmann et al [2023]( https://doi.org/10.1016/j.ecolmodel.2023.110424)). 
 
-- `r pkg("AnimalHabitatNetwork")` provides functions for generating and visualising networks representing the physical configurations of animal habitats. It implements an original  network-generating algorithm based on pair-wise Euclidean and can output undirected network either weighted or binary, fully connected or sparse). The package is associated to a PDF on modelling the physical configurations of animal habitats using networks.
+- `r pkg("AnimalHabitatNetwork")` provides functions for generating and visualising networks representing the physical configurations of animal habitats. 
+It implements an original  network-generating algorithm based on pair-wise Euclidean and can output undirected network either weighted or binary, fully connected or sparse). 
+The package is associated to a PDF on modelling the physical configurations of animal habitats using networks.
 
-- `r pkg("aniSNA")` allows to obtain network structures from animal GPS telemetry observations and statistically analyse them to assess their adequacy for social network analysis. Methods include pre-network data permutations, bootstrapping techniques to obtain confidence intervals for global and node-level network metrics, and correlation and regression analysis of the local network metrics.
+- `r pkg("aniSNA")` allows to obtain network structures from animal GPS telemetry observations and statistically analyse them to assess their adequacy for social network analysis. 
+Methods include pre-network data permutations, bootstrapping techniques to obtain confidence intervals for global and node-level network metrics, and correlation and regression analysis of the local network metrics.
   
 - `r pkg("asnipe")` implements several tools that are used in animal social network analysis to cluster, and generate networks, perform permutation tests, calculate association rates, and performe multiple regression analysis.
   
-- `r pkg("ATNr")` estimates _allometric trophic models_ (ATN) for the species biomasses in dynamic food-webs and allows to generate synthetic networks. It also provides access to the ODE solver deSolve.
+- `r pkg("ATNr")` estimates _allometric trophic models_ (ATN) for the species biomasses in dynamic food-webs and allows to generate synthetic networks. 
+It also provides access to the ODE solver deSolve.
   
 - `r pkg("BIEN")` allows to access the _Botanical Information and Ecology Network Database_ in R
   
 - `r pkg("bipartite")` offers functions to visualise food webs and calculate some ecological indices on them.
   
-- `r pkg("cassandRa")` deals with under-sampling in ecological networks by fitting a variety of statistical models and sample coverage estimators to correct for (likely) missing ties. It works only on bipartite networks.  
+- `r pkg("cassandRa")` deals with under-sampling in ecological networks by fitting a variety of statistical models and sample coverage estimators to correct for (likely) missing ties. 
+It works only on bipartite networks.  
 
-- `pkg("EcoNetGen")`	to simulate and sample from ecological networks,
+- `pkg("EcoNetGen")` to simulate and sample from ecological networks.
 
-- `pkg("econullnetr")` to carry out  null-model analysis for ecological networks 
+- `pkg("econullnetr")` to carry out null-model analysis for ecological networks. 
 
 ## Bibliometric Networks
 
-  - `r pkg("bibliometrix")` includes functions to import bibliographic data from the main publication databases online ('SCOPUS', 'Clarivate Analytics Web of Science', 'Digital Science Dimensions', 'Cochrane Library', 'Lens', and 'PubMed'). It can also build networks (`bibliometrix::biblioNetwork`) for co-citation, coupling, scientific collaboration and co-word analysis including their dynamic versions (`bibliometrix::histNetwork`). It allows to plot the data using `VOSviewer.jar`.
+  - `r pkg("bibliometrix")` includes functions to import bibliographic data from the main publication databases online ('SCOPUS', 'Clarivate Analytics Web of Science', 'Digital Science Dimensions', 'Cochrane Library', 'Lens', and 'PubMed'). 
+It can also build networks (`bibliometrix::biblioNetwork`) for co-citation, coupling, scientific collaboration and co-word analysis including their dynamic versions (`bibliometrix::histNetwork`). 
+It allows to plot the data using `VOSviewer.jar`.
   
   - `r pkg("bibliometrixData")` contains example datasets for testing `bibliometrix`.
   
-  - `r pkg("biblionetwork")`	proposes functions to identify and weight the edges in a bibliometric network. All functions are optimised for large dataset. It implements different methods for different types of relations (based on Perianes-Rodriguez, Waltman, and Van Eck [2016](https://doi.org/10.1016/j.joi.2016.10.006); Leydesdorff and Park [2017](https://doi.org/10.1016/j.joi.2016.11.007)):
+  - `r pkg("biblionetwork")`	proposes functions to identify and weight the edges in a bibliometric network. 
+All functions are optimised for large dataset. 
+It implements different methods for different types of relations (based on Perianes-Rodriguez, Waltman, and Van Eck [2016](https://doi.org/10.1016/j.joi.2016.10.006); Leydesdorff and Park [2017](https://doi.org/10.1016/j.joi.2016.11.007)):
       - co-authorship supports: simple counting, (refined) fractional weight with or with cosine normalisation;
      - bibliographic coupling supports: coupling strength and angle;
      - co-citation supports the cosine normalisation of count weights.   
 
-- `r pkg("Diderot")` is geared towards the analysis of citation networks using  modularity and heterocitation metrics based on Scopus data.
+- `r pkg("Diderot")` is geared towards the analysis of citation networks using modularity and heterocitation metrics based on Scopus data.
     
 ## Biology and (Bio)-Chemistry Networks
 
-  - `r pkg("WGCNA")` focuses on the analysis of weighted correlation networks. It has functions for network construction, modularity computation, gene selection, topological analysis, generating data, plotting, and exports to third-party software. Notably, the underlying data mining approach has been used beyond biochemistry. There are several packages on Bioconductor that reverse-depend/extend these functionalities.
+  - `r pkg("WGCNA")` focuses on the analysis of weighted correlation networks. 
+It has functions for network construction, modularity computation, gene selection, topological analysis, generating data, plotting, and exports to third-party software. 
+Notably, the underlying data mining approach has been used beyond biochemistry. 
+There are several packages on Bioconductor that reverse-depend/extend these functionalities.
 
-  - `r pkg("c3net")` allows to infer gene-regulation networks with direct physical interactions using `C3NET` (Altay and Emmert-Streib [2010](https://doi.org/10.1186/1752-0509-4-132)). Other packages implement improvements/variants of this algorithm based on the literature, such as:
+  - `r pkg("c3net")` allows to infer gene-regulation networks with direct physical interactions using `C3NET` (Altay and Emmert-Streib [2010](https://doi.org/10.1186/1752-0509-4-132)). 
+Other packages implement improvements/variants of this algorithm based on the literature, such as:
   
     - `r pkg("Ac3net")` Infers directional conservative causal core in gene network based on the algorithm for directional network proposed by Altay ([2018](https://doi.org/10.1101/271031)).
     
-    - `r pkg("bc3net")` implements the BC3NET algorithm for inference on gene-regulation networks  (Simoes and Emmert-Streib [2012](https://doi.org/10.1371/journal.pone.0033624)). In essence it offers a Bayesian approach with noninformative prior to the C3NET algorithm.
+    - `r pkg("bc3net")` implements the BC3NET algorithm for inference on gene-regulation networks  (Simoes and Emmert-Streib [2012](https://doi.org/10.1371/journal.pone.0033624)). 
+In essence it offers a Bayesian approach with noninformative prior to the C3NET algorithm.
 
-  - `r pkg("BioNAR")` implements a detailed topologically-based network analysis with functions that create networks based on laboratory-produced meta-data. It includes functions for vertex centrality measure and modularity computation. Additionally, it provides a robust synaptic proteome network for data validation.
+  - `r pkg("BioNAR")` implements a detailed topologically-based network analysis with functions that create networks based on laboratory-produced meta-data. 
+It includes functions for vertex centrality measure and modularity computation. 
+Additionally, it provides a robust synaptic proteome network for data validation.
   
   - `r pkg("BASiNET")`	and `r pkg("BASiNETEntropy")` provide functions for classifying RNA sequences using network algorithms and notions from information theory.
   
@@ -219,18 +238,26 @@ Being a flexible method, network analysis is used in a number of fields with spe
 
 ## Neurosciences & Psychology
 
-- `r pkg("NetworkToolbox")` implements network analysis and graph theory measures used in neuroscience, cognitive science, and psychology. Methods include various filtering methods and approaches such as threshold, dependency. It can also execute some basic operations such as computing centrality of nodes and community or the network's clustering coefficient.
+- `r pkg("NetworkToolbox")` implements network analysis and graph theory measures used in neuroscience, cognitive science, and psychology. 
+Methods include various filtering methods and approaches such as threshold, dependency. 
+It can also execute some basic operations such as computing centrality of nodes and community or the network's clustering coefficient.
 
-- `r pkg("qgraph")` provides tools for visualising and analysing weighted networks and a  Gaussian graphical model for plotting. It is compatible with `r pkg ("igraph")` through the `qgraph::as.igraph.qgraph` function. It is mostly used in psycology and neurosciences.
+- `r pkg("qgraph")` provides tools for visualising and analysing weighted networks and a  Gaussian graphical model for plotting. 
+It is compatible with `r pkg ("igraph")` through the `qgraph::as.igraph.qgraph` function. 
+It is mostly used in psycology and neurosciences.
 
 - `r pkg("HospitalNetwork")` provides functions to construct a one-mode network of hospitals based on the linked two-mode networks of hospitalised patients' transfers.
 
   
 ## Spatial networks
 
-- `r pkg("geonetwork")` handles networks or graphs whose nodes are locations. The functions includes the creation of objects of class `geonetwork` as a graph with node coordinates, the computation of network measures, the support of spatial operations (projection to different Coordinate Reference Systems, handling of bounding boxes, etc.) and the plotting of the `geonetwork` object combined with supplementary cartography for spatial representation. It is compatible with ``r pkg ("igraph")`.
+- `r pkg("geonetwork")` handles networks or graphs whose nodes are locations. 
+The functions includes the creation of objects of class `geonetwork` as a graph with node coordinates, the computation of network measures, the support of spatial operations (projection to different Coordinate Reference Systems, handling of bounding boxes, etc.) and the plotting of the `geonetwork` object combined with supplementary cartography for spatial representation. 
+It is compatible with ``r pkg ("igraph")`.
 
-- `r pkg("chessboard")` provides functions to work with un/directed undirected spatial networks. It allow to create connectivity matrices (`chessboard::connectivity_matrix`) and exports result to several formats: node list, neighbor list, edge list, connectivity matrix, Eigenvector maps. It also implements connectivity for chess pieces via specific functions: `chessboard::bishop`,  `chessboard::knight`, `chessboard::pawn`, `chessboard::queen`, `chessboard::rook`, besides introducing two sets of movement rules `chessboard::fool` and `chessboard::wizard`.
+- `r pkg("chessboard")` provides functions to work with un/directed undirected spatial networks. 
+It allow to create connectivity matrices (`chessboard::connectivity_matrix`) and exports result to several formats: node list, neighbor list, edge list, connectivity matrix, Eigenvector maps. 
+It also implements connectivity for chess pieces via specific functions: `chessboard::bishop`,  `chessboard::knight`, `chessboard::pawn`, `chessboard::queen`, `chessboard::rook`, besides introducing two sets of movement rules `chessboard::fool` and `chessboard::wizard`.
 
 - `r pkg("epanet2toolkit")` interfaces R with  the [EPANET](https://github.com/OpenWaterAnalytics/EPANET/releases/tag/v2.2) programmer's toolkit to carry out basic (`epanet2toolkit::ENepanet`) or customised (`epanet2toolkit::ENopen`) simulations.
 
@@ -242,7 +269,7 @@ Being a flexible method, network analysis is used in a number of fields with spe
   
   - `r pkg("hybridModels")` offers a meta-population model that assign nodes to sub-populations to better model disease spreading through cluster contagion using stochastic simulation algorithm and an individual-based approach.
   
-  - `r pkg("netdiffuseR")` provides function for calculating network effects such as transmission rate, hazard rates, exposure models, network threshold levels, infectiousness (contagion), and susceptibility. 
+  - `r pkg("netdiffuseR")` provides functions for calculating network effects such as transmission rate, hazard rates, exposure models, network threshold levels, infectiousness (contagion), and susceptibility. 
   
   - `r pkg ("EpiModel")` builds on Statnet's for epidemic modelling. But more on this field of application can be found in the [CTV: Epidemiology](https://cran.r-project.org/view=Epidemiology).
 
@@ -250,9 +277,12 @@ Being a flexible method, network analysis is used in a number of fields with spe
 
 - `r pkg ("sna")` implements many operations commonly carried out on networks in the social and econonomic sciences with the ability of regress a network variable on others using ordinary least square, linear network autocorrelation models or a logistic regression.^[More on this type of applications can be found in the CRAN TaskView on [Graphical Models](https://cran.r-project.org/web/views/GraphicalModels.html)]
  
-- `r pkg("FinNet")` provides classes, methods, and functions to deal with financial networks involving both physical and legal persons. The package assists in creating various types of financial networks: ownership, board interlocks, etc.. It support differnt tie-weighting procedures (valued or binary), and renders them in the most common formats (adjacency matrix, incidence matrix, edge list, `r pkg ("igraph")`, `r pkg ("statnet")`).
+- `r pkg("FinNet")` provides classes, methods, and functions to deal with financial networks involving both physical and legal persons. 
+The package assists in creating various types of financial networks: ownership, board interlocks, etc.
+It support differnt tie-weighting procedures (valued or binary), and renders them in the most common formats (adjacency matrix, incidence matrix, edge list, `r pkg ("igraph")`, `r pkg ("statnet")`).
 
-- `r pkg("ITNr")` gathers functions to clean and process international trade data into an adjacency matrix. It can also extract the network's backbone, compute centrality, run blockmodels and other clustering procedures, or highlight regional trade patterns.
+- `r pkg("ITNr")` gathers functions to clean and process international trade data into an adjacency matrix. 
+It can also extract the network's backbone, compute centrality, run blockmodels and other clustering procedures, or highlight regional trade patterns.
 
 - `r pkg("modnets")` models moderator variables in cross-sectional, temporal, and multi-level networks.
 
@@ -261,13 +291,16 @@ Being a flexible method, network analysis is used in a number of fields with spe
 
 # Visualisation
 
-- `r pkg("visNetwork")` focuses on interactive network visualisation using the `vis.js` library. The package  allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting. The package offers a user-friendly interface for creating interactive network visualisations, making it suitable for un-experienced users.
+- `r pkg("visNetwork")` focuses on interactive network visualisation using the `vis.js` library. 
+The package  allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting. 
+The package offers a user-friendly interface for creating interactive network visualisations, making it suitable for un-experienced users.
 
 - `r pkg("networkD3")` provides functions that turns edge lists into a D3 JavaScript network, tree, dendrogram, or Sankey graphs.
 
   - `r pkg("bipartiteD3")` uses the `D3` and `viz-js` libraries for plotting networks produced with the `r pkg("bipartite")` package.
   
-- `r pkg("diagram")` was born as a companion to the book _A practical guide to ecological modelling_ by K. Soetaert and P.M.J. Herman. But it can visualise any network given in the form of a transition matrix as a flow diagram, a web or grid. 
+- `r pkg("diagram")` was born as a companion to the book _A practical guide to ecological modelling_ by K. Soetaert and P.M.J. Herman. 
+But it can visualise any network given in the form of a transition matrix as a flow diagram, a web or grid. 
 
 - `r pkg("ndtv")` renders network objects from the package `networkDynamic` as videos or interactive animations.
 
@@ -285,11 +318,14 @@ Extensions for `ggplot2`:
 
 ## Community detection
 
-- `r pkg("igraph")` is the package of choice for the implementation of most modularity-based community-detection algorithms. Available approaches include betweenes, greedy algorithm, infomap, label propagation Leiden, Generalised Louvain, and walktrap amongst others.
+- `r pkg("igraph")` is the package of choice for the implementation of most modularity-based community-detection algorithms. 
+Available approaches include betweenes, greedy algorithm, infomap, label propagation Leiden, Generalised Louvain, and walktrap amongst others.
 
-- `r pkg("cencrne")` proposes a regularised network-embedding model to simultaneously estimate the community structure and the number of communities in an asymptotically consistent way. Them method is mainly used in biosciences, but is applicable across the board.
+- `r pkg("cencrne")` proposes a regularised network-embedding model to simultaneously estimate the community structure and the number of communities in an asymptotically consistent way. 
+The method is mainly used in biosciences, but is applicable across the board.
 
-- `r pkg("linkcomm")` provides functions for generating, visualising, and analysing overlapping communities in networks of arbitrary size and type. Unlike `igraph` and `network`, it can compute relatedness `linkcomm::getClusterRelatedness` and `linkcomm::getCommunityConnectedness` as well as generate a mesoscopic matrix (`linkcomm::getCommunityMatrix`). Moreover, it can produce membership for hierarchical communities (`linkcomm::getNestedHierarchies`).
+- `r pkg("linkcomm")` provides functions for generating, visualising, and analysing overlapping communities in networks of arbitrary size and type. Unlike `igraph` and `network`, it can compute relatedness `linkcomm::getClusterRelatedness` and `linkcomm::getCommunityConnectedness` as well as generate a mesoscopic matrix (`linkcomm::getCommunityMatrix`). 
+Moreover, it can produce membership for hierarchical communities (`linkcomm::getNestedHierarchies`).
 
 ## Blockmodeling
 
@@ -299,7 +335,8 @@ Extensions for `ggplot2`:
 
 - `r pkg("concoR")` implements the classical CONCOR (CONvergence of iterated CORrelation) algorithm (Breiger, Boorman, and Arabie [1975](https://doi.org/10.1016%2F0022-2496%2875%2990028-0)) for one- and multi-mode un/directed networks.
 
-- `r pkg("blockmodeling")`: this package offers and implementation of generalised blockmodeling (`blockmodeling::optRandomParC`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. Furthermore, it include implementations of the REGE (also implemented in Ucinet) algorithm (`blockmodeling::REGE`).
+- `r pkg("blockmodeling")`: this package offers and implementation of generalised blockmodeling (`blockmodeling::optRandomParC`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
+Furthermore, it include implementations of the REGE (also implemented in Ucinet) algorithm (`blockmodeling::REGE`).
   - `r pkg("BlockmodelingGUI")` is a Shiny app providing a graphical interface for generalised blockmodeling of single-relation, one-mode networks from the package `r pkg("blockmodeling")`. It includes several ways to visualise networks and partitions.
 
 - `r pkg("kmBlock")` implements a k-means like approach to the blockmodeling of one-mode and linked networks as presented in Žiberna ([2020](https://doi.org/10.1016/j.socnet.2019.10.006)) based on structural equivalence.
@@ -312,17 +349,23 @@ Extensions for `ggplot2`:
 
 - `igraph` cannot run SBMs, but it can generates a random graph according to a specified SBM (`igraph::sample_sbm`) or an arbitrary hierarhical SBM (`igraph::sample_hierarchical_sbm`)
 
-- `r pkg("blockmodels")` allows to run the SBM or the Latent Block Model (LBM) of static networks using  a Variational Expectation Maximisation algorithm. Various `S4` functions implement three probability distributions: `BM_bernoulli` for binary data, `BM_poisson` for discrete/count weights, `BM_gaussian` for continuous weights. It allows for SBMs and LBM with or without node covariates and supports multiplex binary networks via `BM_bernoulli_multiplex`.
+- `r pkg("blockmodels")` allows to run the SBM or the Latent Block Model (LBM) of static networks using a Variational Expectation Maximisation algorithm. Various `S4` functions implement three probability distributions: `BM_bernoulli` for binary data, `BM_poisson` for discrete/count weights, `BM_gaussian` for continuous weights. 
+It allows for SBMs and LBM with or without node covariates and supports multiplex binary networks via `BM_bernoulli_multiplex`.
 
-- `r pkg("sbm")` is an extension of `blockmodels` bi- and multi-partite as well as multiplex networks as proposed by Barbillon et al ([2017](https://www.doi.org/10.1111/rssa.12193)) through dedicated `R6` clasess. It includes functions to plot the resulting partition.
+- `r pkg("sbm")` is an extension of `blockmodels` bi- and multi-partite as well as multiplex networks as proposed by Barbillon et al ([2017](https://www.doi.org/10.1111/rssa.12193)) through dedicated `R6` clasess. 
+It includes functions to plot the resulting partition.
 
 - `r pkg ("greed")` leverages a combination of greedy local search and a genetic algorithm to execute (degree-corrected) SBM and Latent Blockmodeling (LBM). 
 
-- `r pkg("dynsbm")` implements the model for temporal networks presented in Matias and Miele ([2020](https://doi.org/10.1111/rssb.12200)) which combines a static SBM with independent Markov chains for the dynamic part. It supports binary and weighted networks with both discrete or continuous edges. Includes also functions for plotting (`adjacency.plot`, `alluvial.plot`, `connectivity.plot`) the partition and automatically constructs matrices as an array of the right format.
+- `r pkg("dynsbm")` implements the model for temporal networks presented in Matias and Miele ([2020](https://doi.org/10.1111/rssb.12200)) which combines a static SBM with independent Markov chains for the dynamic part. 
+It supports binary and weighted networks with both discrete or continuous edges. 
+Includes also functions for plotting (`adjacency.plot`, `alluvial.plot`, `connectivity.plot`) the partition and automatically constructs matrices as an array of the right format.
 
-- `r pkg("MLVSBM")` Implements the SBM of multilevel networks where the different matrices each represent an interaction layer either weighter or binary. It generalises the approach proposed by Chabert-Liddell et al. ([2021](https://doi.org/10.1016/j.csda.2021.107179)) to more than two layers.
+- `r pkg("MLVSBM")` Implements the SBM of multilevel networks where the different matrices each represent an interaction layer either weighter or binary. 
+It generalises the approach proposed by Chabert-Liddell et al. ([2021](https://doi.org/10.1016/j.csda.2021.107179)) to more than two layers.
 
-- `r pkg("StochBlock")` implements the stochastic blockmodeling of one-mode and linked networks as implemented in Škulj and Žiberna ([2022](https://doi.org/10.1016/j.socnet.2022.12.003)). It include utilities to plot the results, but cannot choose automatically the 'right' number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna [2023](https://doi.org/10.1016/j.socnet.2022.12.003));
+- `r pkg("StochBlock")` implements the stochastic blockmodeling of one-mode and linked networks as implemented in Škulj and Žiberna ([2022](https://doi.org/10.1016/j.socnet.2022.12.003)). 
+It include utilities to plot the results, but cannot choose automatically the 'right' number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna [2023](https://doi.org/10.1016/j.socnet.2022.12.003));
 
 -  `r pkg("GREMLINS")` implements the SBM of generalised multipartite networks where the different matrices each involve nodes that can be partitioned into  a-priori defined _functional groups_ as proposed by Bar-Hen, Barbillon, and  Donnet ([2018](https://doi.org/10.1177/1471082X20963254)).
 
