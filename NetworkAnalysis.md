@@ -61,8 +61,16 @@ If you think that a package is missing from the list, please file an issue in th
 	5. [Other](#other)
 5. [References](#references)
 
+# Main tools
+
+- `r pkg("igraph", priority = "core")` provides tools for creating, manipulating, and analysing network structures with a focus on graphical representations and fast algorithms to operate on large datasets (particularly manipulating data and dealing with vertex attributes).
+
+  - *Approach*: `igraph` is an R package built upon a C library that is shared also by implementations in Python and Mathematica. 
+The C code is efficient and the R interface is increasingly consistent and easy to use with a lot of basic functionality, including calculating network properties, generating random graphs for simulations, etc.
+
+  - *Flexibility*: Many of the functions are provided in two versions: for direct assignment e.g., `igraph::E(net)$attribute <- x`, and a pipe-able version, `net <- igraph::set_edge_attr(net, 'attribute', value = x)`.
   
-  - *Support*: There are tons of online resources answering virtually any question concerning _how_ to do anything in `igraph` thanks to a large  community and active maintainers.
+  - *Support*: There are tons of online resources answering virtually any question concerning _how_ to do anything in `igraph` thanks to a large community and active maintainers.
   
   - *Extensions*: There are a number of add-on packages that integrate igraph with `Shiny`, `r pkg("ggplot2")` and other drawing tools, or provide sample datasets. According to the latest review,^[see: Kanevsky, Gregory. 2016. 'R Graph Objects: igraph vs. network. _R Bloggers_. January 30, 2016.  https://www.r-bloggers.com/2016/01/r-graph-objects-igraph-vs-network/] `igraph` has many more extension that the closest runner-up, `network`/`statnet`.
 
