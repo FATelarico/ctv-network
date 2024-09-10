@@ -82,6 +82,16 @@ The C code is efficient and the R interface is increasingly consistent and easy 
  
   - *Comprehensiveness*: `statnet`'s (and `network`'s/`sna`'s) biggest advantage is that it allows users to carry out most network-analytical operations, especially in dealing with social network analysis (SNA). But the trade-off, of course, is that the amount of possibilities makes life harder for new users.
 
+- `r pkg("manynet", priority = "core")` is built upon many of the other network packages in this list, but offers operability with many different classes of objects, many network visualisation and analytic tools.
+
+  - *Approach*: Inspired by `dplyr` and `tidygraph`, `manynet` offers a tidyverse-like style, with even more structure, consistency, and sensible defaults. For example, `net_*()` functions always return a single value (scalar), and `node_*()` and `tie_*()` always return a vector the length of the nodes or ties in the network, respectively. Similarly, `*is_*` functions always return logical values (`TRUE`/`FALSE`), and `*_in_*` returns categorical strings, for example. This helps both new users and those working with multiple packages alike.
+ 
+  - *Flexibility*: `manynet` leverages S3 dispatching so that all the functions work with many _classes_ of network objects, such as `network` or `graph` objects, but also edgelists, matrices, and various other more specific classes. Its coercion routines retain more information than `intergraph`, can transform between more classes (not just igraph and network), and is updated more regularly. It also includes more and more complete import and export routines than e.g. igraph. Moreover, as a fundamental package philosophy, all other functions work with network objects in any of these classes, so manynet can be used in and with almost any network analytic workflow.
+ 
+  - *Comprehensiveness*: `manynet` wraps most of `igraph`'s offerings, but extends or corrects them to treat many _types_ of networks, including two-mode, multiplex, and dynamic networks. The package also implements a number of functions for network analysis that are not available elsewhere, including `igraph`.
+
+  - *Documentation*: `manynet` benefits from a clear and concise documentation, making it accessible to users of all levels. Additionally, it offers straightforward tutorials and examples to help users get started with network analysis in R. Further explanation, examples, and references are continually being to the documentation to provide user reference and support user experience.
+
 - `r pkg("graph")` is a package available on [Biocondutor](https://bioconductor.org/packages/release/bioc/html/graph.html) designed for handling graph-based data structures and performing basic operations on them. It provides a simple and intuitive interface for constructing, manipulating, and analysing graphs.^[Since this Task View focuses on `R` packages available on CRAN, `graph` is not covered as extensively as its main competitors.]
 
   - *Simplicity*: `graph` focuses on providing fundamental functionalities for graph-based tasks, such as graph construction, visualization, and basic analysis. So, it does not offer the same level of statistical modeling capabilities as `statnet` and is less geared towards large networks than `igraph`.
