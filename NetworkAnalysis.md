@@ -167,10 +167,11 @@ Extensions for `ggplot2`:
 
 - `r pkg("patchwork")` 
 
+# Network Analysis
 
 Both `r pkg ("igraph")` and `r pkg ("statnet")` offer functions for a similar set of network-analytic operations, whereas `r pkg ("tidygraph")` is much more limited. Amongst them, it may be worth mentioning some algorithms that differ at least slightly in the implementation and/or there are noteworthy specialised packages.
 
-### Centrality
+## Centrality
 
 Both main packages can compute betweenness, eigenvalue, power, and closeness centrality, but `r pkg ("igraph")` offers more options than `r pkg ("sna")` and `r pkg ("tidygraph")` overall. In addition:
 
@@ -178,9 +179,8 @@ Both main packages can compute betweenness, eigenvalue, power, and closeness cen
 
 - `r pkg("birankr")` provides optimised functions for estimating various centrality measures in bipartite/two-mode networks. It can also estimate efficiently page-rank in one-mode networks, project two-mode networks to one-mode ones, and convert edge lists and matrices to the `sparseMatrix` format offered in the package `Matrix`. It supports edge lists (in the `data.frame`, `data.table::data.table`, or `tidydata::tbl_df` class) and adjacency matrices (either in the built-in `matrix` class or in `Matrix`'s `dgCMatrix` class).
 
-# Network Modeling & Simulation
+- `r pkg("netrankr")`
 
-This section does not include Bayesian networks and Markov Random-Field models as they merely represent relations between variables and are listed in the CRAN TaskView on [Graphical Models](https://cran.r-project.org/web/views/GraphicalModels.html) 
 
 - `r pkg("ergm")` provides function to fit, simulate and analyse exponential-family random graph models (ERGM). Depending on specific needs, several specialised extentions are available
 
