@@ -312,6 +312,9 @@ Note: While `igraph` does not have a specific structure for dynamic networks, `s
 ----
 
 
+# Field Packages
+
+As an interdisciplinary approach, network analysis is used in a number of fields, where the specific needs and interests of those fields are addressed by particular packages.
 
 ## Ecological Networks
 
@@ -443,15 +446,13 @@ It can also extract the network's backbone, compute centrality, run blockmodels 
 
 - `r pkg("graphclust")` implements an agglomerative algorithm to maximize the integrated classification likelihood criterion and a mixture of stochastic block models based on `igraph` objects.
 
-- `r pkg("idopNetwork")` implments the model proposed by Cao et al ([2022](https://doi.org/10.1080/19490976.2022.2106103)) to convert static data into their 'dynamic' form contextually inferring informative, dynamic, multi-directional networks with clusterable structures.
-
 - `r pkg("latentnet")` provides functions to fit and simulate latent position and cluster model using `network` objects and compatibly with `ergm` approaches.
 
 - `r pkg("latenetwork")` TODO
 
 - `r pkg("netClust")` provides a function to cluster unilayer (`netClust::netEM_unilayer`) and multilayer (`netClust::netEM_multilayer`) networks by means of finite mixtures and expectation-maximisation.
 
-# Links
+# References
 
 * Altay, Gokmen. ‘Directed Conservative Causal Core Gene Networks’. bioRxiv, 2 March 2018. https://doi.org/10.1101/271031.
 
@@ -489,8 +490,8 @@ It can also extract the network's backbone, compute centrality, run blockmodels 
 
 * Simoes, Ricardo de Matos, and Frank Emmert-Streib. ‘Bagging Statistical Network Inference from Large-Scale Gene Expression Data’. PLOS ONE 7, no. 3 (30 March 2012): e33624. https://doi.org/10.1371/journal.pone.0033624.
 
-* Warner, Rebecca M., David A. Kenny, and Michael Stoto. ‘A New Round Robin Analysis of Variance for Social Interaction Data.’ Journal of Personality and Social Psychology 37, no. 10 (October 1979): 1742–57. https://doi.org/10.1037/0022-3514.37.10.1742.
-
 * Škulj, Damjan, and Aleš Žiberna. 2022. ‘Stochastic Blockmodeling of Linked Networks’. _Social Networks_ 70 (July): 240–52. https://doi.org/10.1016/j.socnet.2022.02.001.
+
+* Warner, Rebecca M., David A. Kenny, and Michael Stoto. ‘A New Round Robin Analysis of Variance for Social Interaction Data.’ Journal of Personality and Social Psychology 37, no. 10 (October 1979): 1742–57. https://doi.org/10.1037/0022-3514.37.10.1742.
 
 * Žiberna, Aleš. 2020. ‘K-Means-Based Algorithm for Blockmodeling Linked Networks’. _Social Networks_ 61 (May): 153–69. https://doi.org/10.1016/j.socnet.2019.10.006.
