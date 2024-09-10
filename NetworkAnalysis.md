@@ -36,14 +36,31 @@ But, for the sake of brevity, non-core packages are listed only once: in the sec
 
 If you think that a package is missing from the list, please file an issue in the GitHub repository or contact the maintainer.
 
-# Main Packages & Basic tasks
+# Table of Contents
+1. [Main tools](#main-tools)
+	2. [Construction](#network-construction)
+	2. [Manipulation](#network-manipulation)
+	3. [Visualisation](#visualisation)
+	4. [Layouts](#layouts)
+4. [Network analysis](#network-analysis)
+	4. [Centrality](#centrality)
+	4. [Community detection](#community-detection)
+	4. [Blockmodelling](#blockmodelling)
+4. [Network modelling](#network-modelling)
+	4. [Cross-sectional](#cross-sectional)
+	4. [Multimodal](#multimodal)
+	4. [Dynamic](#dynamic)
+5. [Field packages](#field-packages)
+	5. [Ecological networks](#ecological)
+	5. [Bibliometric networks](#bibliometric)
+	5. [Biological and biochemical networks](#biological)
+	5. [Psychological networks](#psychological)
+	5. [Spatial networks](#spatial)
+	5. [Publich health networks](#public-health)
+	5. [Social and economic networks](#social)
+	5. [Other](#other)
+5. [References](#references)
 
-- `r pkg("igraph", priority = "core")` provides tools for creating, manipulating, and analysing network structures with a focus on _nice_ graphical representations and fast algorithms to operate on large datasets (particularly manipulating data and dealing with vertex attributes).
-
-  - *Approach*: igraph takes a somewhat 'basic' approach to network analysis. However, it still contains a lot of functionality, including
-calculating network properties, generating random graphs for simulations, etc. and will probably fit most users' needs.
-
-  - *Flexibility*: any of the functions  are provided in two versions: for direct assignment and a 'piped' version $\big($e.g., `igraph::E(net)$attribute <- x` vs `net <- igraph::set_edge_attr(net, 'attribute', value = x)`$\big)$.
   
   - *Support*: There are tons of online resources answering virtually any question concerning _how_ to do anything in `igraph` thanks to a large  community and active maintainers.
   
