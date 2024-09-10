@@ -98,23 +98,22 @@ The C code is efficient and the R interface is increasingly consistent and easy 
   
   - *Documentation*: `graph` benefits from a clear and concise documentation, making it accessible to users of all levels. Additionally, it offers straightforward tutorials and examples to help users get started with graph analysis in R.
   
-  - *Extentions*: `graph` can be expanded with other packages containing efficient algorithms (for tasks such as shortest path, connectivity etc) and different layout algorithms.
-
-- `r pkg("intergraph, priority = "core")` is not a network analysis package _per se_. Rather it allows to easily convert objects produced by `statnet` packages into `igraph`s (or a data frame) and vice versa. Thus, it is a must-have utility for leveraging multiple packages' functionalities and ensuring compatibility between several users' workflows.
+  - *Extensions*: `graph` can be expanded with other packages containing efficient algorithms (for tasks such as shortest path, connectivity etc) and different layout algorithms.
 
 ## Network Construction
 
-Altough the two core packages for network analysis in `R` can create a wide range of networks from different types of inputs, there are also specialsied packages for narrower fields of application.
+Altough the two core packages for network analysis in `R` can create a wide range of networks from different types of inputs, there are also specialised packages for constructing more specialised formats or for converting or coercing between different formats.
+
+- `r pkg("intergraph")` is not a network analysis package _per se_. Rather it allows to easily convert objects produced by `statnet` packages into `igraph`s (or a data frame) and vice versa. Thus, it is a must-have utility for leveraging multiple packages' functionalities and ensuring compatibility between several users' workflows.
 
   - `r pkg("BoolNet")` provides tools for assembling, analysing and visualising synchronous and asynchronous (probabilistic) Boolean networks as well as  Boolean networks. All the main functions are described in a handy [vignette](https://cran.r-project.org/web/packages/BoolNet/vignettes/BoolNet_package_vignette.pdf).
   
-  - `r pkg("egor")` allows to create ego-centric networ starting on exports from [_EgoNet_](https://github.com/egonet/egonet), [_EgoWeb 2.0_](https://www.qualintitative.com/egoweb/) and [_openeddi_](https://github.com/jfaganUK/openeddi). It includes a Shiny app and procedures for creating and visualising clustered graphs.
+  - `r pkg("egor")` allows to create ego-centric networks starting on exports from [_EgoNet_](https://github.com/egonet/egonet), [_EgoWeb 2.0_](https://www.qualintitative.com/egoweb/) and [_openeddi_](https://github.com/jfaganUK/openeddi). It includes a Shiny app and procedures for creating and visualising clustered graphs.
   
-  - `r pkg("ionet")` creates network starting bt turning input-output tables into weighted adjacency matrices.
+  - `r pkg("ionet")` creates network starting by turning input-output tables into weighted adjacency matrices.
+  - `r pkg("rgraph6")`
  
-----
 
-Note: While `igraph` does not have a specific structure for dynamic networks, `statnet` can manage them through `r pkg("networkDynamic")` and analyse them with `r pkg("tsna")`.
 
 ----
 
