@@ -120,12 +120,53 @@ The main packages for network analysis provide similar network-manipulation capa
 
 - `r pkg("tidygraph")` is designed for handling and manipulating graph data within the [_tidyverse_](https://www.tidyverse.org/) framework. It provides a tidy approach to working with relational data, allowing users to apply familiar data manipulation techniques from the tidyverse to graphs. It does not make it into the 'core' packages because it lacks a comprehensive set of tools for network analysis. Users can easily perform tasks such as filtering, summarizing, and joining graph data using familiar tidyverse syntax. Given that both `r pkg ("igraph")` and `r pkg ("sna")` provide piped functions for most operations, ``r pkg ("tidygraph")`'s added value lies mainly in the possibility of accessing directly either the node data, the edge data or the graph itself while computing inside verbs.
 
+## Visualisation
 
-Both main packages for network analysis provide similar network-manipulation capabilities, but other packages also offer a more limited set of options.
+- `r pkg("visNetwork")` focuses on interactive network visualisation using the `vis.js` library. 
+The package  allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting. 
+The package offers a user-friendly interface for creating interactive network visualisations, making it suitable for un-experienced users.
 
-- `r pkg("tidygraph")` is designed for handling and manipulating graph data within the [_tidyverse_](https://www.tidyverse.org/) framework. It provides a tidy approach to working with relational data, allowing users to apply familiar data manipulation techniques from the tidyverse to graphs. It does not make it into the 'core' packages because it lacks a comprehensive set of tools for network analysis. Users can easily perform tasks such as filtering, summarizing, and joining graph data using familiar tidyverse syntax. Given that both `r pkg ("igraph")` and `r pkg ("statnet")`/`r pkg ("network")` provide piped functions for most operations, ``r pkg ("tidygraph")`'s added value lies mainly in the possibility of accessing directly either the node data, the edge data or the graph itself while computing inside verbs.
+- `r pkg("networkD3")` provides functions that turns edge lists into a D3 JavaScript network, tree, dendrogram, or Sankey graphs.
 
-## Network Analysis
+  - `r pkg("bipartiteD3")` uses the `D3` and `viz-js` libraries for plotting networks produced with the `r pkg("bipartite")` package.
+  
+- `r pkg("diagram")` was born as a companion to the book _A practical guide to ecological modelling_ by K. Soetaert and P.M.J. Herman. 
+But it can visualise any network given in the form of a transition matrix as a flow diagram, a web or grid. 
+
+- `r pkg("ndtv")` renders network objects from the package `networkDynamic` as videos or interactive animations.
+
+- `r pkg("neatmaps")` tries to simplify the exploratory step of data analysis by providing function to easily produce hierarchical clusterings (`neatmaps::hierarchy`), consensus clusterings (`neatmaps::consClustResTable`) and heatmaps of multiple networks (`neatmaps::neatmap`).
+
+- `r pkg("manynet")` builds on `r pkg("ggraph")` for graphing networks in `ggplot2`-style, but shortcuts the complicated syntax and offers sensible defaults to make it easy to visualise and explore network data while retaining the flexibility to theme. 
+	- `manynet::graphr()` is for quick, easy network visualisation.
+	- `manynet::graphs()` is for comparing ego networks or subgraphs side by side.
+	- `manynet::grapht()` is for developing dynamic or longitudinal networks into gifs.
+	- `manynet` includes `plot()` methods for much of its output, including blockmodels and dendrograms for clustering.
+
+Extensions for `ggplot2`:
+
+  - `r pkg("ggnetwork")` offers geometries to plot `network` objects.
+  - `r pkg("ggraph")` allows to plot `igraph` objects by building up plots layer by layer.
+  - `r pkg("ggsom")` offers functions to plot self-organizing maps (SOMs). 
+  - `r pkg("snahelper")`
+  - `r pkg("roughnet")`
+  - `r pkg("gganimate")`
+  - `r pkg("ggdendro")`
+  - `r pkg("multigraph")`
+
+## Layouts
+
+ - `r pkg("ggforce")`
+
+- `r pkg("graphlayouts")` adds several layout algorithms to `r pkg("igraph")` based on the concept of stress majorisation.
+	- See also `r pkg("edgebundle")`
+	
+- `r pkg("manynet")` includes a few more layout algorithms for multimodal networks.
+
+- `r pkg("RGraphViz")`
+
+- `r pkg("patchwork")` 
+
 
 Both `r pkg ("igraph")` and `r pkg ("statnet")` offer functions for a similar set of network-analytic operations, whereas `r pkg ("tidygraph")` is much more limited. Amongst them, it may be worth mentioning some algorithms that differ at least slightly in the implementation and/or there are noteworthy specialised packages.
 
@@ -322,31 +363,6 @@ It can also extract the network's backbone, compute centrality, run blockmodels 
 
 - `r pkg("multinet")` provides functions for the creation/generation and analysis of multi-layer social networks
 
-
-# Visualisation
-
-- `r pkg("visNetwork")` focuses on interactive network visualisation using the `vis.js` library. 
-The package  allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting. 
-The package offers a user-friendly interface for creating interactive network visualisations, making it suitable for un-experienced users.
-
-- `r pkg("networkD3")` provides functions that turns edge lists into a D3 JavaScript network, tree, dendrogram, or Sankey graphs.
-
-  - `r pkg("bipartiteD3")` uses the `D3` and `viz-js` libraries for plotting networks produced with the `r pkg("bipartite")` package.
-  
-- `r pkg("diagram")` was born as a companion to the book _A practical guide to ecological modelling_ by K. Soetaert and P.M.J. Herman. 
-But it can visualise any network given in the form of a transition matrix as a flow diagram, a web or grid. 
-
-- `r pkg("ndtv")` renders network objects from the package `networkDynamic` as videos or interactive animations.
-
-- `r pkg("neatmaps")` tries to simplify the exploratory step of data analysis by providing function to easily produce hierarchical clusterings (`neatmaps::hierarchy`), consensus clusterings (`neatmaps::consClustResTable`) and heatmaps of multiple networks (`neatmaps::neatmap`).
-
-Extensions for `ggplot2`:
-
-  - `r pkg("ggnetwork")` offers geometries to plot `network` objects.
-  - `r pkg("ggraph")` allows to plot `igraph` objects by building up plots layer by layer.
-  - `r pkg("ggsom")` offers functions to plot self-organizing maps (SOMs). 
-
-- `r pkg("graphlayouts")` adds several layout algorithms to `r pkg("igraph")` based on the concept of stress majorisation
 
 # Clustering
 
