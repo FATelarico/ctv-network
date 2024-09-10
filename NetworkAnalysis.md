@@ -7,30 +7,29 @@ version: 2023-05-08
 source: https://github.com/FATelarico/ctv-network
 ---
 
-This CRAN Task View contains a curated list of packages that can be used for analyzing and modeling networks (also known as _relational data_ and _graphs_). 
+This CRAN Task View contains a curated list of packages that can be used for analyzing and modeling networks (also known as _relational data_ or _graphs_). 
 These packages facilitate the examination of natural, social, or other phenomena that manifest themselves in the relations between one or more sets of entities.
 
-The list excludes packages that primarily deal with graphical models defined as graph representations of conditional in/dependence between variables. 
-This includes Markovian graphs, which, despite their relevance in statistical modeling, are better covered under the CRAN TaskView on [Graphical Models](https://cran.r-project.org/web/views/GraphicalModels.html). 
-This distinction keeps the list focused on network analysis to explore broader relational dynamics.
+This page lists a number of packages, and sometimes core functions, in several sections based on their scope and focus:
 
-This page is articulated in sections listing the packages/functions to perform specific operations on networks. 
-The packages are categorised based on their scope and focus as follows:
+1. The first section provides a review of the main all-in-one R packages for basic network-analytic operations such as creating, manipulating, and describing relational data. Here we also list choices of graphical packages for visualising networks.
 
-1. The first section provides a review of all-in-one R packages for basic network-analytic operations such as creating, manipulating, and describing relational data.
+4. Subsequently, packages and functions for advanced network-analytic tasks are presented. 
+We currently structure these into three subsections:
 
-2. Subsequently, packages offering models and inference tools applicable across disciplines and fields of interest are discussed. 
-Here, a distinction is drawn between frequentist and Bayesian methods. 
+    - centrality
+    - community detection
+    - blockmodeling
 
-3. Then, the focus shifts to packages containing data structures, methods, and models with a narrower field of application. 
+2. Then, packages offering models and inference tools applicable across disciplines and fields of interest are discussed. 
+A distinction is drawn between models that are primarily for cross-sectional data and for dynamic data, with an extra section on special models for multimodal, multilevel, and multiplex data. 
+
+3. Finally, the focus shifts to packages containing data structures, methods, and models with a narrower field of application. 
 The list includes some of the areas where network methods are more widely applied: ecology, bibliometrics, (bio)-chemistry, neurosciences and psychology, public health, the social sciences and economics.
 
-4. Finally, packages and functions for two advanced network-analytic tasks are presented: visualisation and clustering. 
-In the latter case, the items listed are distinguished on the basis of their approach into three categories:
-
-    - community detection,
-    - blockmodeling;
-    - others.
+The list excludes packages that primarily deal with graphical models defined as graph representations of conditional in/dependence between variables. 
+This includes Bayesian networks and Markovian graphs, which, despite their relevance in statistical modeling, are better covered under the CRAN TaskView on [Graphical Models](https://cran.r-project.org/web/views/GraphicalModels.html). 
+This distinction keeps the list focused on network analysis to explore broader relational dynamics.
 
 Some packages could appear under multiple headings because they can perform multiple tasks (e.g., clustering and visualisation). 
 But, for the sake of brevity, non-core packages are listed only once: in the section that described each package's main use case.
