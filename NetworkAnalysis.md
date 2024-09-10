@@ -114,10 +114,12 @@ Altough the two core packages for network analysis in `R` can create a wide rang
   - `r pkg("rgraph6")`
  
 
-
-----
-
 ## Network Manipulation
+
+The main packages for network analysis provide similar network-manipulation capabilities, but other packages also offer a more limited set of options.
+
+- `r pkg("tidygraph")` is designed for handling and manipulating graph data within the [_tidyverse_](https://www.tidyverse.org/) framework. It provides a tidy approach to working with relational data, allowing users to apply familiar data manipulation techniques from the tidyverse to graphs. It does not make it into the 'core' packages because it lacks a comprehensive set of tools for network analysis. Users can easily perform tasks such as filtering, summarizing, and joining graph data using familiar tidyverse syntax. Given that both `r pkg ("igraph")` and `r pkg ("sna")` provide piped functions for most operations, ``r pkg ("tidygraph")`'s added value lies mainly in the possibility of accessing directly either the node data, the edge data or the graph itself while computing inside verbs.
+
 
 Both main packages for network analysis provide similar network-manipulation capabilities, but other packages also offer a more limited set of options.
 
