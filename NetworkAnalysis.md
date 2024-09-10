@@ -236,6 +236,9 @@ It include utilities to plot the results, but cannot choose automatically the 'r
 -  `r pkg("GREMLINS")` implements the SBM of generalised multipartite networks where the different matrices each involve nodes that can be partitioned into  a-priori defined _functional groups_ as proposed by Bar-Hen, Barbillon, and  Donnet ([2018](https://doi.org/10.1177/1471082X20963254)).
 
 
+# Network Modeling
+
+## Cross-Sectional Networks
 
 - `r pkg("ergm")` provides function to fit, simulate and analyse exponential-family random graph models (ERGM). Depending on specific needs, several specialised extentions are available
 
@@ -257,15 +260,23 @@ It supports  binary networks as well as valued ones (assuming a Gaussian, zero-i
 It works on undirected network only.
   - For an alternative see `r pkg("localboot")`.
 
-- `r pkg("dyads")` offers functions for the MCMC simulation of dyadic network models j2, p2 (also multilevel) and b2 model.
-
 - `r pkg("fastnet")` allows to simulate large-scale social networks and retrieve their most relevant metrics following the approach proposed by  Dong, Castro, and Shaikh ([2020](https://doi.org/10.18637/jss.v096.i07)).
-
-- `r pkg("multinets")` is an `igraph` extension to analyse multilevel networks as described in  Lazega and Snijders's book ([2016](https://doi.org/10.1007/978-3-319-24520-1)).
 
 - `r pkg("nda")` gathers non-parametric dimensionality-reduction functions  with/out (automated) feature selection and limited plotting capabilities.
 
 - `r pkg("lolog")` implements Latent Order Logistic (LOLOG) models, a network formation process in which edges are added one at a time drawn from a distribution conditional on edges already added, with order unknown.
+
+## Multimodal/Multilevel Networks
+
+- `r pkg("migraph")` is an `igraph` extension to analyse multimodal networks as described in Knoke, Diani, Hollway, and Christopoulos ([2021](https://doi.org/10.1017/9781108985000)).
+
+- `r pkg("multinets")` is an `igraph` extension to analyse multilevel networks as described in Lazega and Snijders's book ([2016](https://doi.org/10.1007/978-3-319-24520-1)).
+
+- `r pkg("multiplex")` makes possible, among other things, to create and manipulate multiplex, multimode, and multilevel network data with different formats ([2020](https://doi.org/10.18637%2Fjss.v092.i11)).
+
+- `r pkg("dyads")` offers functions for the MCMC simulation of dyadic network models j2, p2 (also multilevel) and b2 model.
+
+- `r pkg("tnet")` includes functions for analysing two-mode, weighted, and longitudinal networks.
 
 ## Dynamic Networks
 
@@ -277,7 +288,7 @@ Relational event data contains information about exact times during which the no
 
 - `r pkg("rem")` and `r pkg("relevent")` both contain functions to fit and simulate dyad-oriented relational event models. `r pkg("relevent")` can also estimate event sequence data without time stamps.
 
-- `r pkg("goldfish")` offers functions to fit and simulate actor-oriented dynamic network actor models and dyad-oriented relational event models.
+- `r pkg("goldfish")` offers functions to fit and simulate actor-oriented dynamic network actor models and dyad-oriented relational event models as described in Stadtfeld et al. ([2017](https://doi.org/10.1177/00811750177092)).
 
 ### Discrete Observations
 
@@ -292,10 +303,15 @@ Varying node sets are also supported.
 
 - `r pkg("RSiena")` estimation of continuous-time Stochastic Actor-Oriented Models (SAOMs) for panel network data.
 
+- `r pkg("idopNetwork")` implments the model proposed by Cao et al ([2022](https://doi.org/10.1080/19490976.2022.2106103)) to convert static data into their 'dynamic' form contextually inferring informative, dynamic, multi-directional networks with clusterable structures.
 
-# Ad-hoc Packages
+----
 
-Being a flexible method, network analysis is used in a number of fields with specific needs addressed by ad-hoc packages.
+Note: While `igraph` does not have a specific structure for dynamic networks, `statnet` can manage them through `r pkg("networkDynamic")` and analyse them with `r pkg("tsna")`. `manynet` can handle longitudinal and network event data.
+
+----
+
+
 
 ## Ecological Networks
 
