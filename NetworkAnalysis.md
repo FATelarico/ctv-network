@@ -74,12 +74,11 @@ The C code is efficient and the R interface is increasingly consistent and easy 
   
   - *Extensions*: There are a number of add-on packages that integrate igraph with `Shiny`, `r pkg("ggplot2")` and other drawing tools, or provide sample datasets. According to the latest review,^[see: Kanevsky, Gregory. 2016. 'R Graph Objects: igraph vs. network. _R Bloggers_. January 30, 2016.  https://www.r-bloggers.com/2016/01/r-graph-objects-igraph-vs-network/] `igraph` has many more extension that the closest runner-up, `network`/`statnet`.
 
-- `r pkg("statnet", priority = "core")`  is a collection of packages (incl. `r pkg("network, priority = "core"`) developed by the _statnet_ team at the
-University of Washington.
+- `r pkg("sna", priority = "core")` builds on `r pkg("network, priority = "core"`), both developed by the _statnet_ team at the University of Washington.
 
-  - *Approach*: It is not always user-friendly because its focus is on statistically testing models based on  Exponential-Family Random Graph Models (ERGMs) and other modeling tools;
+  - *Approach*: The approach in the _statnet_ group of packages is more disaggregated than `igraph`, and involves a number of different packages for different purposes. Together `sna` and `network` serve the `ergm` group of packages.;
  
-  - *Flexibility*: New users may find it useful to install only the two basic packages in `statnet`: `nework` and `sna`. Note that, as `igraph`, also these packages suit both traditional coding and a 'piped' approach; 
+  - *Flexibility*: `network` and `sna` are the two basic packages in `r pkg("statnet")` and together can be used to analyse social network data. Note that, as `igraph`, these packages also suit both direct assignment and a 'piped' approach; 
  
   - *Comprehensiveness*: `statnet`'s (and `network`'s/`sna`'s) biggest advantage is that it allows users to carry out most network-analytical operations, especially in dealing with social network analysis (SNA). But the trade-off, of course, is that the amount of possibilities makes life harder for new users.
 
