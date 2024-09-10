@@ -181,6 +181,61 @@ Both main packages can compute betweenness, eigenvalue, power, and closeness cen
 
 - `r pkg("netrankr")`
 
+## Community detection
+
+- `r pkg("igraph")` is the package of choice for the implementation of most modularity-based community-detection algorithms. 
+Available approaches include betweenes, greedy algorithm, infomap, label propagation Leiden, Generalised Louvain, and walktrap amongst others.
+
+- `r pkg("cencrne")` proposes a regularised network-embedding model to simultaneously estimate the community structure and the number of communities in an asymptotically consistent way. 
+The method is mainly used in biosciences, but is applicable across the board.
+
+- `r pkg("linkcomm")` provides functions for generating, visualising, and analysing overlapping communities in networks of arbitrary size and type. Unlike `igraph` and `network`, it can compute relatedness `linkcomm::getClusterRelatedness` and `linkcomm::getCommunityConnectedness` as well as generate a mesoscopic matrix (`linkcomm::getCommunityMatrix`). 
+Moreover, it can produce membership for hierarchical communities (`linkcomm::getNestedHierarchies`).
+
+## Blockmodeling
+
+### Generalised blockmodeling (structural and/or regular equivalence)
+
+- `r pkg("sna")` implements a simple version of stuctural-equivalence blockmodel (`sna::blockmodel`), can generate networks with a given blockmodel as well as print and plot the results.
+
+- `r pkg("concoR")` implements the classical CONCOR (CONvergence of iterated CORrelation) algorithm (Breiger, Boorman, and Arabie [1975](https://doi.org/10.1016%2F0022-2496%2875%2990028-0)) for one- and multi-mode un/directed networks.
+
+- `r pkg("blockmodeling")`: this package offers and implementation of generalised blockmodeling (`blockmodeling::optRandomParC`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
+Furthermore, it include implementations of the REGE (also implemented in Ucinet) algorithm (`blockmodeling::REGE`).
+  - `r pkg("BlockmodelingGUI")` is a Shiny app providing a graphical interface for generalised blockmodeling of single-relation, one-mode networks from the package `r pkg("blockmodeling")`. It includes several ways to visualise networks and partitions.
+
+- `r pkg("kmBlock")` implements a k-means like approach to the blockmodeling of one-mode and linked networks as presented in Žiberna ([2020](https://doi.org/10.1016/j.socnet.2019.10.006)) based on structural equivalence.
+
+- `r pkg("dBlockmodeling")` contains functions to apply blockmodeling of signed (positive and negative weights are assigned to the links), one-mode and valued one-mode and two-mode.
+
+- `r pkg("signnet")` offers to functions implementing the generalised blockmodeling with structural equivalence (`signnet::signed_blockmodel`) and generalised equivalence (`signnet::signed_blockmodel_general`) of signed networks based on `graph` objects from the R package `r pkg("igraph")` 
+- `r pkg("oaqc")` enables efficient computation of the orbit-aware quad census from Ortmann and Brandes ([2017](https://doi.org/10.1007/s41109-017-0027-2)).
+
+### Stochastic blockmodeling (SBM)
+
+- `igraph` cannot run SBMs, but it can generates a random graph according to a specified SBM (`igraph::sample_sbm`) or an arbitrary hierarhical SBM (`igraph::sample_hierarchical_sbm`)
+
+- `r pkg("blockmodels")` allows to run the SBM or the Latent Block Model (LBM) of static networks using a Variational Expectation Maximisation algorithm. Various `S4` functions implement three probability distributions: `BM_bernoulli` for binary data, `BM_poisson` for discrete/count weights, `BM_gaussian` for continuous weights. 
+It allows for SBMs and LBM with or without node covariates and supports multiplex binary networks via `BM_bernoulli_multiplex`.
+
+- `r pkg("sbm")` is an extension of `blockmodels` bi- and multi-partite as well as multiplex networks as proposed by Barbillon et al ([2017](https://www.doi.org/10.1111/rssa.12193)) through dedicated `R6` clasess. 
+It includes functions to plot the resulting partition.
+
+- `r pkg ("greed")` leverages a combination of greedy local search and a genetic algorithm to execute (degree-corrected) SBM and Latent Blockmodeling (LBM). 
+
+- `r pkg("dynsbm")` implements the model for temporal networks presented in Matias and Miele ([2020](https://doi.org/10.1111/rssb.12200)) which combines a static SBM with independent Markov chains for the dynamic part. 
+It supports binary and weighted networks with both discrete or continuous edges. 
+Includes also functions for plotting (`adjacency.plot`, `alluvial.plot`, `connectivity.plot`) the partition and automatically constructs matrices as an array of the right format.
+
+- `r pkg("MLVSBM")` Implements the SBM of multilevel networks where the different matrices each represent an interaction layer either weighter or binary. 
+It generalises the approach proposed by Chabert-Liddell et al. ([2021](https://doi.org/10.1016/j.csda.2021.107179)) to more than two layers.
+
+- `r pkg("StochBlock")` implements the stochastic blockmodeling of one-mode and linked networks as implemented in Škulj and Žiberna ([2022](https://doi.org/10.1016/j.socnet.2022.12.003)). 
+It include utilities to plot the results, but cannot choose automatically the 'right' number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna [2023](https://doi.org/10.1016/j.socnet.2022.12.003));
+
+-  `r pkg("GREMLINS")` implements the SBM of generalised multipartite networks where the different matrices each involve nodes that can be partitioned into  a-priori defined _functional groups_ as proposed by Bar-Hen, Barbillon, and  Donnet ([2018](https://doi.org/10.1177/1471082X20963254)).
+
+
 
 - `r pkg("ergm")` provides function to fit, simulate and analyse exponential-family random graph models (ERGM). Depending on specific needs, several specialised extentions are available
 
@@ -363,61 +418,6 @@ It can also extract the network's backbone, compute centrality, run blockmodels 
 
 - `r pkg("multinet")` provides functions for the creation/generation and analysis of multi-layer social networks
 
-
-# Clustering
-
-## Community detection
-
-- `r pkg("igraph")` is the package of choice for the implementation of most modularity-based community-detection algorithms. 
-Available approaches include betweenes, greedy algorithm, infomap, label propagation Leiden, Generalised Louvain, and walktrap amongst others.
-
-- `r pkg("cencrne")` proposes a regularised network-embedding model to simultaneously estimate the community structure and the number of communities in an asymptotically consistent way. 
-The method is mainly used in biosciences, but is applicable across the board.
-
-- `r pkg("linkcomm")` provides functions for generating, visualising, and analysing overlapping communities in networks of arbitrary size and type. Unlike `igraph` and `network`, it can compute relatedness `linkcomm::getClusterRelatedness` and `linkcomm::getCommunityConnectedness` as well as generate a mesoscopic matrix (`linkcomm::getCommunityMatrix`). 
-Moreover, it can produce membership for hierarchical communities (`linkcomm::getNestedHierarchies`).
-
-## Blockmodeling
-
-### Generalised blockmodeling (structural and/or regular equivalence)
-
-- `r pkg("sna")` implements a simple version of stuctural-equivalence blockmodel (`sna::blockmodel`), can generate networks with a given blockmodel as well as print and plot the results.
-
-- `r pkg("concoR")` implements the classical CONCOR (CONvergence of iterated CORrelation) algorithm (Breiger, Boorman, and Arabie [1975](https://doi.org/10.1016%2F0022-2496%2875%2990028-0)) for one- and multi-mode un/directed networks.
-
-- `r pkg("blockmodeling")`: this package offers and implementation of generalised blockmodeling (`blockmodeling::optRandomParC`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
-Furthermore, it include implementations of the REGE (also implemented in Ucinet) algorithm (`blockmodeling::REGE`).
-  - `r pkg("BlockmodelingGUI")` is a Shiny app providing a graphical interface for generalised blockmodeling of single-relation, one-mode networks from the package `r pkg("blockmodeling")`. It includes several ways to visualise networks and partitions.
-
-- `r pkg("kmBlock")` implements a k-means like approach to the blockmodeling of one-mode and linked networks as presented in Žiberna ([2020](https://doi.org/10.1016/j.socnet.2019.10.006)) based on structural equivalence.
-
-- `r pkg("dBlockmodeling")` contains functions to apply blockmodeling of signed (positive and negative weights are assigned to the links), one-mode and valued one-mode and two-mode.
-
-- `r pkg("signnet")` offers to functions implementing the generalised blockmodeling with structural equivalence (`signnet::signed_blockmodel`) and generalised equivalence (`signnet::signed_blockmodel_general`) of signed networks based on `graph` objects from the R package `r pkg("igraph")` 
-
-### Stochastic blockmodeling (SBM)
-
-- `igraph` cannot run SBMs, but it can generates a random graph according to a specified SBM (`igraph::sample_sbm`) or an arbitrary hierarhical SBM (`igraph::sample_hierarchical_sbm`)
-
-- `r pkg("blockmodels")` allows to run the SBM or the Latent Block Model (LBM) of static networks using a Variational Expectation Maximisation algorithm. Various `S4` functions implement three probability distributions: `BM_bernoulli` for binary data, `BM_poisson` for discrete/count weights, `BM_gaussian` for continuous weights. 
-It allows for SBMs and LBM with or without node covariates and supports multiplex binary networks via `BM_bernoulli_multiplex`.
-
-- `r pkg("sbm")` is an extension of `blockmodels` bi- and multi-partite as well as multiplex networks as proposed by Barbillon et al ([2017](https://www.doi.org/10.1111/rssa.12193)) through dedicated `R6` clasess. 
-It includes functions to plot the resulting partition.
-
-- `r pkg ("greed")` leverages a combination of greedy local search and a genetic algorithm to execute (degree-corrected) SBM and Latent Blockmodeling (LBM). 
-
-- `r pkg("dynsbm")` implements the model for temporal networks presented in Matias and Miele ([2020](https://doi.org/10.1111/rssb.12200)) which combines a static SBM with independent Markov chains for the dynamic part. 
-It supports binary and weighted networks with both discrete or continuous edges. 
-Includes also functions for plotting (`adjacency.plot`, `alluvial.plot`, `connectivity.plot`) the partition and automatically constructs matrices as an array of the right format.
-
-- `r pkg("MLVSBM")` Implements the SBM of multilevel networks where the different matrices each represent an interaction layer either weighter or binary. 
-It generalises the approach proposed by Chabert-Liddell et al. ([2021](https://doi.org/10.1016/j.csda.2021.107179)) to more than two layers.
-
-- `r pkg("StochBlock")` implements the stochastic blockmodeling of one-mode and linked networks as implemented in Škulj and Žiberna ([2022](https://doi.org/10.1016/j.socnet.2022.12.003)). 
-It include utilities to plot the results, but cannot choose automatically the 'right' number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna [2023](https://doi.org/10.1016/j.socnet.2022.12.003));
-
--  `r pkg("GREMLINS")` implements the SBM of generalised multipartite networks where the different matrices each involve nodes that can be partitioned into  a-priori defined _functional groups_ as proposed by Bar-Hen, Barbillon, and  Donnet ([2018](https://doi.org/10.1177/1471082X20963254)).
 
 ## Others
 
