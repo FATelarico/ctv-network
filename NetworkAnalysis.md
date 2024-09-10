@@ -266,6 +266,10 @@ It works on undirected network only.
 
 - `r pkg("lolog")` implements Latent Order Logistic (LOLOG) models, a network formation process in which edges are added one at a time drawn from a distribution conditional on edges already added, with order unknown.
 
+- `r pkg("MoNAn")` implements the method to analyse the structure of weighted mobility networks or distribution networks outlined in Block et al ([2022](https://doi.org/10.1016/j.socnet.2021.08.003)).
+
+- `r pkg("ERPM")` extends exponential random graph models (ERGMs) to explain cross-sectional or longitudinal observed partitions, i.e. sets of non-overlapping groups, such as face-to-face interactions, animal herds, or political coalitions, through group formation processes based on individual attributes, relations between individuals, and size-related factors.
+
 ## Multimodal/Multilevel Networks
 
 - `r pkg("migraph")` is an `igraph` extension to analyse multimodal networks as described in Knoke, Diani, Hollway, and Christopoulos ([2021](https://doi.org/10.1017/9781108985000)).
