@@ -286,11 +286,22 @@ It works on undirected network only.
 
 The following packages focus on modeling and simulation of networks that evolve over time and network processes that occur over time.
 
+### Dynamics and diffusion
+
+- `r pkg("networkDynamic")` from `statnet` allows the management of dynamic networks.
+	- `r pkg("tsna")` is used to analyse them.
+	- `r pkg("EpiModel")` is for simulating mathematical models of infectious disease dynamics.
+
+- `r pkg("manynet")` can manipulate, visualise, and analyse longitudinal and network event data, including running contagion/diffusion processes and compartmental models.
+
+- `r pkg("netdiffuseR")` was developed as part of Valente et al. ([2015](https://doi.org/10.1016/j.socscimed.2015.10.001)). The package is for the empirical statistical analysis, visualization and simulation of network diffusion and contagion processes. The package implements algorithms for calculating network diffusion statistics such as transmission rate, hazard rates, exposure models, network threshold levels, infectiousness (contagion), and susceptibility.
+
 ### Relational Events
 
 Relational event data contains information about exact times during which the nodes interact. This is commonly observed for e-mail, radio, and other communications.
 
-- `r pkg("rem")` and `r pkg("relevent")` both contain functions to fit and simulate dyad-oriented relational event models. `r pkg("relevent")` can also estimate event sequence data without time stamps.
+- `r pkg("rem")` and `r pkg("relevent")` both contain functions to fit and simulate dyad-oriented relational event models. 
+	- `r pkg("relevent")` can also estimate event sequence data without time stamps.
 
 - `r pkg("goldfish")` offers functions to fit and simulate actor-oriented dynamic network actor models and dyad-oriented relational event models as described in Stadtfeld et al. ([2017](https://doi.org/10.1177/00811750177092)).
 
@@ -308,12 +319,6 @@ Varying node sets are also supported.
 - `r pkg("RSiena")` estimation of continuous-time Stochastic Actor-Oriented Models (SAOMs) for panel network data.
 
 - `r pkg("idopNetwork")` implments the model proposed by Cao et al ([2022](https://doi.org/10.1080/19490976.2022.2106103)) to convert static data into their 'dynamic' form contextually inferring informative, dynamic, multi-directional networks with clusterable structures.
-
-----
-
-Note: While `igraph` does not have a specific structure for dynamic networks, `statnet` can manage them through `r pkg("networkDynamic")` and analyse them with `r pkg("tsna")`. `manynet` can handle longitudinal and network event data.
-
-----
 
 
 # Field Packages
