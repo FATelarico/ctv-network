@@ -435,50 +435,58 @@ The functions includes the creation of objects of class `geonetwork` as a graph 
 
 # References
 
-* Altay, Gokmen. ‘Directed Conservative Causal Core Gene Networks’. bioRxiv, 2 March 2018. https://doi.org/10.1101/271031.
+* Altay, Gokmen. 2018. ‘Directed Conservative Causal Core Gene Networks’. _bioRxiv_. <https://doi.org/10.1101/271031>.
 
-* Altay, Gökmen, and Frank Emmert-Streib. ‘Inferring the Conservative Causal Core of Gene Regulatory Networks’. BMC Systems Biology 4, no. 1 (28 September 2010): 132. https://doi.org/10.1186/1752-0509-4-132.
+* Altay, Gökmen, and Frank Emmert-Streib. 2010. ‘Inferring the Conservative Causal Core of Gene Regulatory Networks’. _BMC Systems Biology_ 4(1): 132. <https://doi.org/10.1186/1752-0509-4-132>.
 
-* Barbillon, Pierre, Sophie Donnet, Emmanuel Lazega, and Avner Bar-Hen. 2017. ‘Stochastic Block Models for Multiplex Networks: An Application to a Multilevel Network of Researchers’. _Journal of the Royal Statistical Society Series A: Statistics in Society _ 180 (1): 295–314. https://doi.org/10.1111/rssa.12193.
+* Barbillon, Pierre, Sophie Donnet, Emmanuel Lazega, and Avner Bar-Hen. 2017. ‘Stochastic Block Models for Multiplex Networks: An Application to a Multilevel Network of Researchers’. _Journal of the Royal Statistical Society Series A: Statistics in Society_ 180 (1): 295–314. <https://doi.org/10.1111/rssa.12193>.
 
-* Bar-Hen, Avner, Pierre Barbillon, and Sophie Donnet. 2022. ‘Block Models for Generalized Multipartite Networks: Applications in Ecology and Ethnobiology’. _Statistical Modelling_ 22 (4): 273–96. https://doi.org/10.1177/1471082X20963254.
+* Bar-Hen, Avner, Pierre Barbillon, and Sophie Donnet. 2022. ‘Block Models for Generalized Multipartite Networks: Applications in Ecology and Ethnobiology’. _Statistical Modelling_ 22 (4): 273–96. <https://doi.org/10.1177/1471082X20963254>.
 
-* Batagelj, Vladimir, and Matjaž Zaveršnik. ‘Fast Algorithms for Determining (Generalized) Core Groups in Social Networks’. _Advances in Data Analysis and Classification_ 5, no. 2 (1 July 2011): 129–45. https://doi.org/10.1007/s11634-010-0079-y.
+* Batagelj, Vladimir, and Matjaž Zaveršnik. ‘Fast Algorithms for Determining (Generalized) Core Groups in Social Networks’. _Advances in Data Analysis and Classification_ 5, no. 2 (1 July 2011): 129–45. <https://doi.org/10.1007/s11634-010-0079-y>.
 
-* Breiger, Ronald L, Scott A Boorman, and Phipps Arabie. 1975. ‘An Algorithm for Clustering Relational Data with Applications to Social Network Analysis and Comparison with Multidimensional Scaling’. _Journal of Mathematical Psychology_ 12 (3): 328–83. https://doi.org/10.1016/0022-2496(75)90028-0.
+* Block, Per, Christoph Stadtfeld, and Garry Robins. 2022. 'A statistical model for the analysis of mobility tables as weighted networks with an application to faculty hiring networks'. _Social Networks_ 68: 264–278. <https://doi.org/10.1016/j.socnet.2021.08.003>.
 
-* Cao, Xiaocang, Ang Dong, Guangbo Kang, Xiaoli Wang, Liyun Duan, Huixing Hou, Tianming Zhao, et al. ‘Modeling Spatial Interaction Networks of the Gut Microbiota’. Gut Microbes 14, no. 1 (31 December 2022): 2106103. https://doi.org/10.1080/19490976.2022.2106103.
+* Breiger, Ronald L, Scott A Boorman, and Phipps Arabie. 1975. ‘An Algorithm for Clustering Relational Data with Applications to Social Network Analysis and Comparison with Multidimensional Scaling’. _Journal of Mathematical Psychology_ 12 (3): 328–83. <https://doi.org/10.1016/0022-2496(75)90028-0>.
 
-* Chabert-Liddell, Saint-Clair, Pierre Barbillon, Sophie Donnet, and Emmanuel Lazega. 2021. ‘A Stochastic Block Model Approach for the Analysis of Multilevel Networks: An Application to the Sociology of Organizations’. _Computational Statistics & Data Analysis_ 158 (June): 107179. https://doi.org/10.1016/j.csda.2021.107179.
+* Cao, Xiaocang, Ang Dong, Guangbo Kang, Xiaoli Wang, Liyun Duan, Huixing Hou, Tianming Zhao, et al. 2022. ‘Modeling Spatial Interaction Networks of the Gut Microbiota’. _Gut Microbes_ 14(1): 2106103. <https://doi.org/10.1080/19490976.2022.2106103>.
 
-* Côme, E., Jouvin, N., Latouche, P. et al. Hierarchical clustering with discrete latent variable models and the integrated classification likelihood. Adv Data Anal Classif 15, 957–986 (2021). https://doi.org/10.1007/s11634-021-00440-z
+* Chabert-Liddell, Saint-Clair, Pierre Barbillon, Sophie Donnet, and Emmanuel Lazega. 2021. ‘A Stochastic Block Model Approach for the Analysis of Multilevel Networks: An Application to the Sociology of Organizations’. _Computational Statistics & Data Analysis_ 158 (June): 107179. <https://doi.org/10.1016/j.csda.2021.107179>.
 
-* Cugmas, Marjan, and Aleš Žiberna. 2023. ‘Approaches to Blockmodeling Dynamic Networks: A Monte Carlo Simulation Study’. _Social Networks_ 73 (May): 7–19. https://doi.org/10.1016/j.socnet.2022.12.003.
+* Côme, E., Jouvin, N., Latouche, P. et al. 2021. 'Hierarchical clustering with discrete latent variable models and the integrated classification likelihood'. _Adv Data Anal Classif_ 15: 957–986. <https://doi.org/10.1007/s11634-021-00440-z>
 
-* Dong, Xu, Luis Castro, and Nazrul Shaikh. ‘Fastnet: An R Package for Fast Simulation and Analysis of Large-Scale Social Networks’. Journal of Statistical Software 96 (5 December 2020): 1–23. https://doi.org/10.18637/jss.v096.i07.
+* Cugmas, Marjan, and Aleš Žiberna. 2023. ‘Approaches to Blockmodeling Dynamic Networks: A Monte Carlo Simulation Study’. _Social Networks_ 73 (May): 7–19. <https://doi.org/10.1016/j.socnet.2022.12.003>.
 
-* Hoff, Peter D. ‘Multiplicative Latent Factor Models for Description and Prediction of Social Networks’. Computational and Mathematical Organization Theory 15, no. 4 (December 2009): 261–72. https://doi.org/10.1007/s10588-008-9040-4.
+* Dong, Xu, Luis Castro, and Nazrul Shaikh. 2020. ‘Fastnet: An R Package for Fast Simulation and Analysis of Large-Scale Social Networks’. _Journal of Statistical Software_ 96: 1–23. <https://doi.org/10.18637/jss.v096.i07>.
 
-* Lafosse, R., and Hanafi, M.. "Concordance d’un tableau avec $K$ tableaux : définition de $K + 1$ uples synthétiques." Revue de Statistique Appliquée 45.4 (1997): 111-126. <http://eudml.org/doc/106424>.
+* Hoff, Peter D. 2009. ‘Multiplicative Latent Factor Models for Description and Prediction of Social Networks’. _Computational and Mathematical Organization Theory_ 15(4): 261–72. <https://doi.org/10.1007/s10588-008-9040-4>.
 
-* Lazega, Emmanuel, and Tom A.B. Snijders, eds. Multilevel Network Analysis for the Social Sciences. Cham: Springer International Publishing, 2016. https://doi.org/10.1007/978-3-319-24520-1.
+* Hoffman, Marion, Per Block, Timon Elmer, and Christoph Stadtfeld. 2020. 'A model for the dynamics of face-to-face interactions in social groups'. _Network Science_ 8(S1): S4–S25. <https://doi.org/10.1017/nws.2020.3>
 
-* Leydesdorff, Loet, and Han Woo Park. ‘Full and Fractional Counting in Bibliometric Networks’. Journal of Informetrics 11, no. 1 (February 2017): 117–20. https://doi.org/10.1016/j.joi.2016.11.007.
+* Knoke, David, Mario Diani, James Hollway, and Dimitris Christopoulos. 2021. _Multimodal Political Networks_. Cambridge: Cambridge University Press. <https://doi.org/10.1017/9781108985000>.
 
-* Martin, Evan A., and A. Fu. ‘Approximate Bayesian Inference of Directed Acyclic Graphs in Biology with Flexible Priors on Edge States’, 2019. https://arxiv.org/abs/1909.10678.
+* Lafosse, R., and Hanafi, M. 1997. "Concordance d’un tableau avec $K$ tableaux : définition de $K + 1$ uples synthétiques." _Revue de Statistique Appliquée_ 45(4): 111-126. <http://eudml.org/doc/106424>.
 
-* Matias, Catherine, and Vincent Miele. 2017. ‘Statistical Clustering of Temporal Networks through a Dynamic Stochastic Block Model’. _Journal of the Royal Statistical Society. Series B (Statistical Methodology)_ 79 (4): 1119–41. https://www.jstor.org/stable/26773154.
+* Lazega, Emmanuel, and Tom A.B. Snijders, eds. 2016. _Multilevel Network Analysis for the Social Sciences_. Cham: Springer International Publishing. <https://doi.org/10.1007/978-3-319-24520-1>.
 
-* Ohlmann, Marc, Catherine Matias, Giovanni Poggiato, Stéphane Dray, Wilfried Thuiller, and Vincent Miele. ‘Quantifying the Overall Effect of Biotic Interactions on Species Distributions along Environmental Gradients’. Ecological Modelling 483 (1 September 2023): 110424. https://doi.org/10.1016/j.ecolmodel.2023.110424.
+* Leydesdorff, Loet, and Han Woo Park. 2017. ‘Full and Fractional Counting in Bibliometric Networks’. _Journal of Informetrics_ 11(1): 117–20. <https://doi.org/10.1016/j.joi.2016.11.007>.
 
-* Perianes-Rodriguez, Antonio, Ludo Waltman, and Nees Jan Van Eck. ‘Constructing Bibliometric Networks: A Comparison between Full and Fractional Counting’. Journal of Informetrics 10, no. 4 (November 2016): 1178–95. https://doi.org/10.1016/j.joi.2016.10.006.
+* Martin, Evan A., and A. Fu. 2019. ‘Approximate Bayesian Inference of Directed Acyclic Graphs in Biology with Flexible Priors on Edge States’. <https://arxiv.org/abs/1909.10678>.
 
-* Schoch, David. (2018). Centrality without Indices: Partial rankings and rank Probabilities in networks. Social Networks, 54, 50-60. https://doi.org/10.1016/j.socnet.2017.12.003
+* Matias, Catherine, and Vincent Miele. 2017. ‘Statistical Clustering of Temporal Networks through a Dynamic Stochastic Block Model’. _Journal of the Royal Statistical Society. Series B (Statistical Methodology)_ 79 (4): 1119–41. <https://www.jstor.org/stable/26773154>.
 
-* Simoes, Ricardo de Matos, and Frank Emmert-Streib. ‘Bagging Statistical Network Inference from Large-Scale Gene Expression Data’. PLOS ONE 7, no. 3 (30 March 2012): e33624. https://doi.org/10.1371/journal.pone.0033624.
+* Ohlmann, Marc, Catherine Matias, Giovanni Poggiato, Stéphane Dray, Wilfried Thuiller, and Vincent Miele. 2023. ‘Quantifying the Overall Effect of Biotic Interactions on Species Distributions along Environmental Gradients’. _Ecological Modelling_ 483: 110424. <https://doi.org/10.1016/j.ecolmodel.2023.110424>.
 
-* Škulj, Damjan, and Aleš Žiberna. 2022. ‘Stochastic Blockmodeling of Linked Networks’. _Social Networks_ 70 (July): 240–52. https://doi.org/10.1016/j.socnet.2022.02.001.
+* Perianes-Rodriguez, Antonio, Ludo Waltman, and Nees Jan Van Eck. 2016. ‘Constructing Bibliometric Networks: A Comparison between Full and Fractional Counting’. _Journal of Informetrics_ 10(4): 1178–95. <https://doi.org/10.1016/j.joi.2016.10.006>.
 
-* Warner, Rebecca M., David A. Kenny, and Michael Stoto. ‘A New Round Robin Analysis of Variance for Social Interaction Data.’ Journal of Personality and Social Psychology 37, no. 10 (October 1979): 1742–57. https://doi.org/10.1037/0022-3514.37.10.1742.
+* Schoch, David. 2018. 'Centrality without Indices: Partial rankings and rank Probabilities in networks'. _Social Networks_ 54: 50-60. <https://doi.org/10.1016/j.socnet.2017.12.003>.
 
-* Žiberna, Aleš. 2020. ‘K-Means-Based Algorithm for Blockmodeling Linked Networks’. _Social Networks_ 61 (May): 153–69. https://doi.org/10.1016/j.socnet.2019.10.006.
+* Simoes, Ricardo de Matos, and Frank Emmert-Streib. 2012. ‘Bagging Statistical Network Inference from Large-Scale Gene Expression Data’. _PLOS ONE_ 7(3): e33624. <https://doi.org/10.1371/journal.pone.0033624>.
+
+* Škulj, Damjan, and Aleš Žiberna. 2022. ‘Stochastic Blockmodeling of Linked Networks’. _Social Networks_ 70: 240–52. <https://doi.org/10.1016/j.socnet.2022.02.001>.
+
+* Stadtfeld, Christoph, James Hollway, and Per Block. 2017. 'Dynamic Network Actor Models: Investigating Coordination Ties through Time'. _Sociological Methodology_ 47(1): 1–40. <https://doi.org/10.1177/0081175017709295>.
+
+* Warner, Rebecca M., David A. Kenny, and Michael Stoto. 1979. ‘A New Round Robin Analysis of Variance for Social Interaction Data.’ _Journal of Personality and Social Psychology_ 37(10): 1742–57. <https://doi.org/10.1037/0022-3514.37.10.1742>.
+
+* Žiberna, Aleš. 2020. ‘K-Means-Based Algorithm for Blockmodeling Linked Networks’. _Social Networks_ 61: 153–69. <https://doi.org/10.1016/j.socnet.2019.10.006>.
