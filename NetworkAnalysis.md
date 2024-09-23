@@ -193,14 +193,14 @@ The method is mainly used in biosciences, but is applicable across the board.
 
 ### Generalised blockmodeling (structural and/or regular equivalence)
 
-- `r pkg("sna")` implements a simple version of stuctural-equivalence blockmodel (`sna::blockmodel`), can generate networks with a given blockmodel as well as print and plot the results.
+- `r pkg("sna")` implements a simple version of stuctural-equivalence blockmodel (`sna::blockmodel()`), can generate networks with a given blockmodel as well as print and plot the results.
 
 - `r pkg("concorR")` implements the classical CONCOR (CONvergence of iterated CORrelation) algorithm (Breiger, Boorman, and Arabie [1975](https://doi.org/10.1016%2F0022-2496%2875%2990028-0)) for one- and multi-mode un/directed networks.
 
 - `r pkg("BMConcor")` allows the simultaneous blockmodeling of networks based on structural and regular equivalence through singular value decomposition (SVD) by blocks (see Lafosse and Hanafi [1997](https://eudml.org/doc/106424))
 
-- `r pkg("blockmodeling")`: this package offers and implementation of generalised blockmodeling (`blockmodeling::optRandomParC`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
-Furthermore, it include implementations of the REGE (also implemented in Ucinet) algorithm (`blockmodeling::REGE`).
+- `r pkg("blockmodeling")`: this package offers and implementation of generalised blockmodeling (`blockmodeling::optRandomParC()`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
+Furthermore, it include implementations of the REGE (also implemented in Ucinet) algorithm (`blockmodeling::REGE()`).
   - `r pkg("BlockmodelingGUI")` is a Shiny app providing a graphical interface for generalised blockmodeling of single-relation, one-mode networks from the package `r pkg("blockmodeling")`. It includes several ways to visualise networks and partitions.
 
 - `r pkg("kmBlock")` implements a k-means like approach to the blockmodeling of one-mode and linked networks as presented in Žiberna ([2020](https://doi.org/10.1016/j.socnet.2019.10.006)) based on structural equivalence.
