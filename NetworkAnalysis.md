@@ -106,13 +106,13 @@ Altough the two core packages for network analysis in `R` can create a wide rang
 
 - `r pkg("intergraph")` is not a network analysis package _per se_. Rather it allows to easily convert objects produced by `statnet` packages into `igraph`s (or a data frame) and vice versa. Thus, it is a must-have utility for leveraging multiple packages' functionalities and ensuring compatibility between several users' workflows.
 
-  - `r pkg("BoolNet")` provides tools for assembling, analysing and visualising synchronous and asynchronous (probabilistic) Boolean networks as well as  Boolean networks. All the main functions are described in a handy [vignette](https://cran.r-project.org/web/packages/BoolNet/vignettes/BoolNet_package_vignette.pdf).
+- `r pkg("BoolNet")` provides tools for assembling, analysing and visualising synchronous and asynchronous (probabilistic) Boolean networks as well as  Boolean networks. All the main functions are described in a handy [vignette](https://cran.r-project.org/web/packages/BoolNet/vignettes/BoolNet_package_vignette.pdf).
   
-  - `r pkg("egor")` allows to create ego-centric networks starting from exports from [_EgoNet_](https://github.com/egonet/egonet), [_EgoWeb 2.0_](https://www.qualintitative.com/egoweb/) and [_openeddi_](https://github.com/jfaganUK/openeddi). It includes a Shiny app and procedures for creating and visualising clustered graphs.
+- `r pkg("egor")` allows to create ego-centric networks starting from exports from [_EgoNet_](https://github.com/egonet/egonet), [_EgoWeb 2.0_](https://www.qualintitative.com/egoweb/) and [_openeddi_](https://github.com/jfaganUK/openeddi). It includes a Shiny app and procedures for creating and visualising clustered graphs.
   
-  - `r pkg("ionet")` creates network starting by turning input-output tables into weighted adjacency matrices.
+- `r pkg("ionet")` creates network starting by turning input-output tables into weighted adjacency matrices.
 
-  - `r pkg("rgraph6")` allows to encode relational data (adjacency matrices, edgelists, `network` and `igraph` objects) as ASCII strings and vice  versa using `graph6`, `sparse6`, and `digraph6` [formats](http://users.cecs.anu.edu.au/~bdm/data/formats.txt). 
+- `r pkg("rgraph6")` allows to encode relational data (adjacency matrices, edgelists, `network` and `igraph` objects) as ASCII strings and vice  versa using `graph6`, `sparse6`, and `digraph6` [formats](http://users.cecs.anu.edu.au/~bdm/data/formats.txt). 
  
 
 ## Network Manipulation
@@ -148,7 +148,7 @@ Extensions for `ggplot2`:
   - `r pkg("ggraph")` allows to plot `igraph` objects by building up plots layer by layer.
   - `r pkg("ggsom")` offers functions to plot self-organizing maps (SOMs). 
   - `r pkg("snahelper")` is an addin allowing access to a GUI for visualising and analysing networks. Once the visualisation is set, the relevant code is automatically added to the script. 
-  - `r pkg("roughnet")` Leverages the [rough.js](https://github.com/rough-stuff/rough) library to draw sketchy, hand-drawn-like networks
+  - `r pkg("roughnet")` leverages the [rough.js](https://github.com/rough-stuff/rough) library to draw sketchy, hand-drawn-like networks
   - `r pkg("gganimate")` allows to produce GIFs and MP4s version of evolving ggplots, including those representing networks. 
   - `r pkg("ggdendro")` makes it easy to make ggplots of dendograms create using the functions `tree`, `hclust`, `dendrogram`, and `rpart`.
   - `r pkg("multigraph")` is a powerful tool providing for easier visualisations of multigraphs, valued/signed networks, bipartite networks, multilevel networksnetworks, and Cayley graphs with various layout options.
@@ -157,7 +157,7 @@ Extensions for `ggplot2`:
 
  - `r pkg("ggforce")` offers functions for specialised plots, some of which also find application in network analysis. Most importantly, alluvial plots can be used to visualize composition of groups in a dynamic network. 
 
-- `r pkg("graphlayouts")` adds several layout algorithms to `r pkg("igraph")` based on the concept of stress majorisation.
+- `r pkg("graphlayouts")` adds several layout algorithms to `r pkg("igraph")` and `r pkg("ggraph)` based on the concept of stress majorisation.
 	- See also `r pkg("edgebundle")`
 	
 - `r pkg("manynet")` includes a few more layout algorithms for multimodal networks.
@@ -168,7 +168,8 @@ Extensions for `ggplot2`:
 
 # Network Analysis
 
-Both `r pkg ("igraph")` and `r pkg ("statnet")` offer functions for a similar set of network-analytic operations, whereas `r pkg ("tidygraph")` is much more limited. Amongst them, it may be worth mentioning some algorithms that differ at least slightly in the implementation and some specialised packages.
+`r pkg ("igraph")`, `r pkg ("sna")`, and `r pkg("manynet")` offer functions for a similar set of network-analytic operations, whereas `r pkg ("tidygraph")` is more limited. 
+However, some algorithms differ from each other and some specialised packages in their implementation, speed, or defaults.
 
 ## Centrality
 
