@@ -195,7 +195,7 @@ The method is mainly used in biosciences, but is applicable across the board.
 
 - `r pkg("sna")` implements a simple version of stuctural-equivalence blockmodel (`sna::blockmodel`), can generate networks with a given blockmodel as well as print and plot the results.
 
-- `r pkg("concoR")` implements the classical CONCOR (CONvergence of iterated CORrelation) algorithm (Breiger, Boorman, and Arabie [1975](https://doi.org/10.1016%2F0022-2496%2875%2990028-0)) for one- and multi-mode un/directed networks.
+- `r pkg("concorR")` implements the classical CONCOR (CONvergence of iterated CORrelation) algorithm (Breiger, Boorman, and Arabie [1975](https://doi.org/10.1016%2F0022-2496%2875%2990028-0)) for one- and multi-mode un/directed networks.
 
 - `r pkg("BMConcor")` allows the simultaneous blockmodeling of networks based on structural and regular equivalence through singular value decomposition (SVD) by blocks (see Lafosse and Hanafi [1997](https://eudml.org/doc/106424))
 
