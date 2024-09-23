@@ -102,7 +102,7 @@ The C code is efficient and the R interface is increasingly consistent and easy 
 
 ## Network Construction
 
-Altough the two core packages for network analysis in `R` can create a wide range of networks from different types of inputs, there are also specialised packages for constructing more specialised formats or for converting or coercing between different formats.
+Altough the core packages for network analysis in `R` can create a wide range of networks from different types of inputs, there are also specialised packages for constructing more specialised formats or for converting or coercing between different formats.
 
 - `r pkg("intergraph")` is not a network analysis package _per se_. Rather it allows to easily convert objects produced by `statnet` packages into `igraph`s (or a data frame) and vice versa. Thus, it is a must-have utility for leveraging multiple packages' functionalities and ensuring compatibility between several users' workflows.
 
@@ -112,14 +112,11 @@ Altough the two core packages for network analysis in `R` can create a wide rang
   
 - `r pkg("ionet")` creates network starting by turning input-output tables into weighted adjacency matrices.
 
-- `r pkg("rgraph6")` allows to encode relational data (adjacency matrices, edgelists, `network` and `igraph` objects) as ASCII strings and vice  versa using `graph6`, `sparse6`, and `digraph6` [formats](http://users.cecs.anu.edu.au/~bdm/data/formats.txt). 
- 
-
-## Network Manipulation
-
-The main packages for network analysis provide similar network-manipulation capabilities, but other packages also offer a more limited set of options.
+- `r pkg("rgraph6")` allows to encode relational data (adjacency matrices, edgelists, `network` and `igraph` objects) as ASCII strings and vice  versa using `graph6`, `sparse6`, and `digraph6` [formats](http://users.cecs.anu.edu.au/~bdm/data/formats.txt).
 
 - `r pkg("tidygraph")` is designed for handling and manipulating graph data within the [_tidyverse_](https://www.tidyverse.org/) framework. It provides a tidy approach to working with relational data, allowing users to apply familiar data manipulation techniques from the tidyverse to graphs. It does not make it into the 'core' packages because it lacks a comprehensive set of tools for network analysis. Users can easily perform tasks such as filtering, summarizing, and joining graph data using familiar tidyverse syntax. Given that both `r pkg ("igraph")` and `r pkg ("sna")` provide piped functions for most operations, `r pkg ("tidygraph")`'s added value lies mainly in the possibility of accessing directly either the node data, the edge data or the graph itself while computing inside verbs.
+
+- `r pkg("backbone")` enables the extraction of the sparse and unweighted subgraph of a network called a 'backbone'.
 
 ## Visualisation
 
@@ -276,6 +273,8 @@ It works on undirected network only.
 - `r pkg("dyads")` offers functions for the MCMC simulation of dyadic network models j2, p2 (also multilevel) and b2 model.
 
 - `r pkg("tnet")` includes functions for analysing two-mode, weighted, and longitudinal networks.
+
+- `r pkg("incidentally")` implements methods to generate incidence matrices as described in Neal ([2022](https://doi.org/10.31219/osf.io/ectms)).
 
 ## Dynamic Networks
 
