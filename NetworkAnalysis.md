@@ -421,7 +421,7 @@ It includes functions to plot the resulting partition.
 
 - `r pkg("latentnet")` provides functions to fit and simulate latent position and cluster model using `network` objects and compatibly with `ergm` approaches.
 
-- `r pkg("latenetwork")` implements Hoshino and Yanagi's method for the causal inference with noncompliance and network interference of unknown form on average causal using instrumental variables.
+- `r pkg("latenetwork")` implements Hoshino and Yanagi's ([2023](https://arxiv.org/abs/2108.07455)) method for the causal inference with noncompliance and network interference of unknown form on average causal using instrumental variables.
 
 - `r pkg("netClust")` provides a function to cluster unilayer (`netClust::netEM_unilayer`) and multilayer (`netClust::netEM_multilayer`) networks by means of finite mixtures and expectation-maximisation.
 
