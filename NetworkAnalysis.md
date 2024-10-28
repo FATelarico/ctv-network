@@ -12,19 +12,19 @@ These packages facilitate the examination of natural, social, or other phenomena
 
 This page lists a number of packages, and sometimes core functions, in several sections based on their scope and focus:
 
-1. The first section provides a review of the main all-in-one R packages for basic network-analytic operations such as creating, manipulating, and describing relational data. Here we also list choices of graphical packages for visualising networks.
+1. The first section outlines the main ecosystems of R packages that include basic network-analytic operations such as creating, manipulating, and describing relational data. Here we also list choices of graphical packages for visualising or drawing networks.
 
-4. Subsequently, packages and functions for advanced network-analytic tasks are presented. 
-We currently structure these into two subsections: (1) centrality and (2) community detection.
+2. Subsequently, packages and functions for advanced network-analytic tasks are presented. 
+We currently structure these into three subsections: (1) centrality, (2) community detection, and (3) model-based clustering.
 
-2. Then, packages offering models and inference tools applicable across disciplines and fields of interest are discussed. 
+3. Then, packages offering modelling and inferential tools applicable across disciplines and fields of interest are discussed. 
 A distinction is drawn between models that are primarily for cross-sectional data and for dynamic data, with an extra section on special models for multimodal, multilevel, and multiplex data. 
 
-3. Finally, the focus shifts to packages containing data structures, methods, and models with a narrower field of application. 
+4. Finally, the focus shifts to packages containing data structures, methods, and models with a narrower field of application. 
 The list includes some of the areas where network methods are more widely applied: ecology, bibliometrics, (bio)-chemistry, neurosciences and psychology, public health, the social sciences and economics.
 
-The list excludes packages that primarily deal with graphical models defined as graph representations of conditional in/dependence between variables. 
-This includes Bayesian networks and Markovian graphs, which, despite their relevance in statistical modeling, are better covered under the CRAN TaskView on [Graphical Models](https://cran.r-project.org/web/views/GraphicalModels.html). 
+The list excludes packages that primarily deal with graph representations of conditional in/dependence between variables. 
+This includes Bayesian networks and Markovian graphs, which, despite their relevance in statistical modeling, are covered under the CRAN TaskView on [Graphical Models](https://cran.r-project.org/web/views/GraphicalModels.html). 
 This distinction keeps the list focused on network analysis to explore broader relational dynamics.
 
 Some packages could appear under multiple headings because they can perform multiple tasks (e.g., clustering and visualisation). 
