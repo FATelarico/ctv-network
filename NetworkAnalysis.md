@@ -7,12 +7,11 @@ version: 2024-09-10
 source: https://github.com/FATelarico/ctv-network
 ---
 
-This CRAN Task View contains a curated list of packages that can be used for analyzing and modeling networks (also known as _relational data_ or _graphs_). 
-These packages facilitate the examination of natural, social, or other phenomena that manifest themselves in the relations between one or more sets of entities.
+This CRAN Task View provides a curated list of R packages for analysing and modelling networks (also known as *relational data* or *graphs*). These tools facilitate the exploration of natural, social, and other phenomena by focusing on the relationships between entities.
 
 This page lists a number of packages, and sometimes core functions, in several sections based on their scope and focus:
 
-1. The first section outlines the main ecosystems of R packages that include basic network-analytic operations such as creating, manipulating, and describing relational data. Here we also list choices of graphical packages for visualising or drawing networks.
+1. The first section outlines the main ecosystems of R packages that include basic network-analytic operations such as creating, manipulating, and describing relational data. Here we also list choices of graphical packages for visualising or drawing networks.^[For those new to network analysis in R, we recommend starting with the [`igraph` introduction](https://igraph.org/c/doc/igraph-Introduction.html) or the [`statnet` tutorial](https://statnet.org/workshop-intro-sna-tools/).]
 
 2. Subsequently, packages and functions for advanced network-analytic tasks are presented. 
 We currently structure these into three subsections: (1) centrality, (2) community detection, and (3) model-based clustering.
@@ -48,7 +47,7 @@ If you think that a package is missing from the list, please file an issue in th
 4. [Field packages](#field-packages)
 	1. [Ecological networks](#ecological)
 	2. [Bibliometric networks](#bibliometric)
-	3. [Biological and biochemical networks](#biological)
+	3. [Networks in the Natural and Life Sciences](#biolife)
 	4. [Psychological networks](#psychological)
 	5. [Spatial networks](#spatial)
 	6. [Public health networks](#public-health)
@@ -109,7 +108,7 @@ Altough the 'core' packages for network analysis in `R` can create a wide range 
 
 ## Visualisation
 
-### General puprpose
+### Interactive Visualisation
 
 - `r pkg("visNetwork")` focuses on interactive network visualisation using the `vis.js` [library](https://github.com/visjs). 
 The package  allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting. The package offers a user-friendly interface for creating interactive network visualisations, making it suitable for un-experienced users.
@@ -117,7 +116,9 @@ The package  allows users to create visually appealing and interactive network v
 - `r pkg("networkD3")` provides functions that turns edge lists into a [D3 JavaScript](https://github.com/d3/d3) network, tree, dendrogram, or Sankey graphs.
 
   - `r pkg("bipartiteD3")` uses the `D3` and `viz.js` libraries for plotting networks produced with the `r pkg("bipartite")` package.
-  
+
+### Static Visualisation
+
 - `r pkg("diagram")` was born as a companion to the book _A practical guide to ecological modelling_ by K. Soetaert and P.M.J. Herman. But it can visualise any network given in the form of a transition matrix as a flow diagram, a web or grid. 
 
 - `r pkg("ndtv")` renders network objects from the package `networkDynamic` as videos or interactive animations.
@@ -235,6 +236,8 @@ It includes functions to plot the resulting partition.
 - `r pkg("netClust")` provides a function to cluster unilayer (`netClust::netEM_unilayer`) and multilayer (`netClust::netEM_multilayer`) networks by means of finite mixtures and expectation-maximisation.
 
 # Statistical Modeling
+
+Statistical modelling in network analysis enables researchers to uncover patterns, test hypotheses, and make predictions about network structures and dynamics. This section introduces R packages that support a range of statistical approaches, from modelling static (cross-sectional) networks to analysing dynamic, multimodal, and multilevel networks. These methods provide tools to infer underlying processes that generate observed network data, assess the significance of observed patterns, and simulate network structures under various conditions.
 
 ## Cross-Sectional Networks
 
@@ -363,7 +366,7 @@ All functions are optimised for large dataset. It implements different methods f
 
 - `r pkg("Diderot")` is geared towards the analysis of citation networks using modularity and heterocitation metrics based on Scopus data.
     
-## Biology and (Bio)-Chemistry Networks
+## Networks in the Natural and Life Sciences
 
   - `r pkg("WGCNA")` focuses on the analysis of weighted correlation networks. It has functions for network construction, modularity computation, gene selection, topological analysis, generating data, plotting, and exports to third-party software. Notably, the underlying data mining approach has been used beyond biochemistry. There are several packages on Bioconductor that reverse-depend/extend these functionalities.
 
