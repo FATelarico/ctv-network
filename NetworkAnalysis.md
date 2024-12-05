@@ -33,28 +33,40 @@ But, for the sake of brevity, non-core packages are listed only once: in the sec
 
 If you think that a package is missing from the list, please file an issue in the GitHub repository or contact the maintainer.
 
+<!-- TOC start -->
 # Table of contents
 - [Ecosystems](#ecosystems)
-	- [Construction](#network-construction)
-	- [Visualization](#visualization)
+   * [Network construction](#network-construction)
+   * [Visualization](#visualization)
+      + [Interactive visualization](#interactive-visualization)
+      + [Static visualization](#static-visualization)
+      + [Extensions for `ggplot2`](#extensions-for-ggplot2)
+      + [Layouts](#layouts)
 - [Network analysis](#network-analysis)
-	- [Centrality](#centrality)
-	- [Community detection](#community-detection)
-	- [Model-based clustering](#model-based-clustering)
-- [Statistical modelling](#statistical-modelling)
-	- [Cross-sectional](#cross-sectional)
-	- [Multimodal](#multimodal)
-	- [Dynamic](#dynamic)
+   * [Centrality](#centrality)
+   * [Community detection](#community-detection)
+   * [Model-based clustering ](#model-based-clustering)
+      + [Generalized blockmodeling (structural and/or regular equivalence)](#generalized-blockmodeling-structural-andor-regular-equivalence)
+      + [Stochastic blockmodeling (SBM)](#stochastic-blockmodeling-sbm)
+      + [Others](#others)
+- [Statistical modeling](#statistical-modeling)
+   * [Cross-sectional networks](#cross-sectional-networks)
+   * [Multimodal and multilevel networks](#multimodal-and-multilevel-networks)
+   * [Dynamic networks](#dynamic-networks)
+      + [Dynamics and diffusion](#dynamics-and-diffusion)
+      + [Relational events](#relational-events)
+      + [Discrete observations](#discrete-observations)
 - [Field packages](#field-packages)
-	- [Ecological networks](#ecological)
-	- [Bibliometric networks](#bibliometric)
-	- [Networks in the Natural and Life Sciences](#biolife)
-	- [Psychological networks](#psychological)
-	- [Spatial networks](#spatial)
-	- [Public health networks](#public-health)
-	- [Social and economic networks](#social)
-	- [Other](#other)
+   * [Ecological networks](#ecological-networks)
+   * [Bibliometric networks](#bibliometric-networks)
+   * [Networks in the natural and life sciences](#networks-in-the-natural-and-life-sciences)
+   * [Neurosciences and psychology](#neurosciences-and-psychology)
+   * [Spatial networks](#spatial-networks)
+   * [Public-health networks](#public-health-networks)
+   * [Social and economic networks](#social-and-economic-networks)
 - [References](#references)
+
+<!-- TOC end -->
 
 # Ecosystems
 
