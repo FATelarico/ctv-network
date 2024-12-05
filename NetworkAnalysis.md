@@ -258,7 +258,7 @@ It supports binary and weighted networks with both discrete and continuous edges
 - `r pkg("MLVSBM")` Implements the SBM of multilevel networks where the different matrices each represent an interaction layer either weighter or binary. It generalizes the approach proposed by Chabert-Liddell et al. (2021: `r doi("10.1016/j.csda.2021.107179")`) to more than two layers.
 
 - `r pkg("StochBlock")` implements the stochastic blockmodeling of one-mode and linked networks as implemented in Škulj and Žiberna (2022: `r doi("10.1016/j.socnet.2022.12.003")`).
-It includes utilities to plot the results but cannot choose automatically the 'right' number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna [2023]).
+It includes utilities to plot the results but cannot choose automatically the 'right' number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna 2023).
 
 - `r pkg("GREMLINS")` implements the SBM of generalized multipartite networks where the different matrices each involve nodes that can be partitioned into  a-priori defined _functional groups_ as proposed by Bar-Hen, Barbillon, and  Donnet (2018: `r doi("10.1177/1471082X20963254")`).
 
