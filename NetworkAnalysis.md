@@ -75,7 +75,7 @@ The C code is efficient, and the R interface is increasingly consistent and easy
   
   - *Extensions*: There are a number of add-on packages that integrate igraph with `r pkg("ggplot2")` and other drawing tools or provide sample datasets. According to the latest review this is the largest network-analysis ecosystem in R by number of extensions (see Kanevsky 2016).
 
-- `r pkg("statnet", priority = "core")`, sometimes used only as `r pkg("sna", priority = "core")` and/or `r pkg("network, priority = "core")` is a more organic family of packages for statistical network analysis built upon common data representations and design choices. But there are also 'add-ons', although not as many as in the previous ecosystem. 
+- `r pkg("statnet", priority = "core")`, sometimes used only as `r pkg("sna", priority = "core")` and/or `r pkg("network", priority = "core")` is a more organic family of packages for statistical network analysis built upon common data representations and design choices. But there are also 'add-ons', although not as many as in the previous ecosystem. 
 
   - *Approach*: The approach in this group of packages is more disaggregated and involves a number of different packages for different purposes. Not least, they provide support to the packages in the `r pkg("ergm")` family.
  
@@ -110,7 +110,7 @@ Thus, it helps leveraging multiple packages' functionalities and ensuring compat
 - `r pkg("BoolNet")` provides tools for assembling, analyzing and visualizing synchronous and asynchronous (probabilistic) Boolean networks as well as simpler Boolean networks.
 All the main functions are described in a handy [vignette](https://cran.r-project.org/web/packages/BoolNet/vignettes/BoolNet_package_vignette.pdf).
   
-- `r pkg("egor")` allows to create ego-centric networks starting from exports from [_EgoNet_](https://github.com/egonet/egonet), [_EgoWeb 2.0_](https://www.qualintitative.com/egoweb/) and [_openeddi_](https://github.com/jfaganUK/openeddi). It includes a Shiny app and procedures for creating and visualizing clustered graphs.
+- `r pkg("egor")` allows to create ego-centric networks starting from exports from _EgoNet_(`r github("egonet/egonet")`), [_EgoWeb 2.0_](https://www.qualintitative.com/egoweb/) and _openeddi_(`r github("jfaganUK/openeddi")`). It includes a Shiny app and procedures for creating and visualizing clustered graphs.
   
 - `r pkg("ionet")` creates network starting by turning input-output tables into weighted adjacency matrices.
 
@@ -129,11 +129,11 @@ Given that both `r pkg ("igraph")` and `r pkg ("sna")` provide piped functions f
 
 More details in the CRAN TaskView `r view("DynamicVisualizations")`.
 
-- `r pkg("visNetwork")` focuses on interactive network visualization using the `vis.js` [library](https://github.com/visjs). 
+- `r pkg("visNetwork")` focuses on interactive network visualization using the `vis.js` library (`r github("visjs")`). 
 The package  allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting.
 It offers a user-friendly interface for creating interactive network visualizations, making it suitable for un-experienced users.
 
-- `r pkg("networkD3")` provides functions that turns edge lists into a [D3 JavaScript](https://github.com/d3/d3) network, tree, dendrogram, or Sankey plots.
+- `r pkg("networkD3")` provides functions that turns edge lists into a D3 JavaScript(`r github("d3/d3")`) network, tree, dendrogram, or Sankey plots.
 
   - `r pkg("bipartiteD3")` uses the `D3` and `viz.js` libraries for plotting networks produced with the `r pkg("bipartite")` package.
 
@@ -165,7 +165,7 @@ It offers a user-friendly interface for creating interactive network visualizati
  
  - `r pkg("snahelper")` is an add-on allowing access to a GUI for visualizing and analyzing networks. Once the visualization is set, the relevant code is automatically added to the script. 
  
- - `r pkg("roughnet")` leverages the [rough.js](https://github.com/rough-stuff/rough) library to draw sketchy, hand-drawn-like networks
+ - `r pkg("roughnet")` leverages the _rough.js_ (`r github("rough-stuff/rough")`) library to draw sketchy, hand-drawn-like networks
  
  - `r pkg("gganimate")` allows to produce GIFs and MP4s version of evolving `ggplots`, including those representing networks. 
  
@@ -178,11 +178,11 @@ It offers a user-friendly interface for creating interactive network visualizati
  - `r pkg("ggforce")` offers functions for specialized plots, some of which also find application in network analysis. 
 Most importantly, alluvial plots can be used to visualize composition of groups in a dynamic network. 
 
-- `r pkg("graphlayouts")` adds several layout algorithms to `r pkg("igraph")` and `r pkg("ggraph)` based on the concept of stress majorization (See also `r pkg("edgebundle")`).
+- `r pkg("graphlayouts")` adds several layout algorithms to `r pkg("igraph")` and `r pkg("ggraph")` based on the concept of stress majorization (See also `r pkg("edgebundle")`).
 	
 - `r pkg("manynet")` includes a few more layout algorithms for multimodal networks.
 
-- `r pkg("RGraphViz")`, available on [Bioconductor](https://bioconductor.org/packages/Rgraphviz/), creates a direct link between the `r pkg("graph")` package and the `graphviz` library. 
+- `r pkg("RGraphViz")`, available on Bioconductor (`r bioc("Rgraphviz")`), creates a direct link between the `r pkg("graph")` package and the `graphviz` library. 
 
 - `r pkg("patchwork")` allows for arbitrarily complex composition of plots that can be used, for example, in visualizing multipartite and other complex networks.
 
@@ -347,13 +347,13 @@ It implements algorithms for calculating network diffusion statistics such as tr
 Relational event data contains information about exact times during which the nodes interact. This is commonly observed for e-mail, radio, and other communications.
 
 - `r pkg("rem")` and `r pkg("relevent")` both contain functions to fit and simulate dyad-oriented relational event models.
-But only `r pkg(relevent")` can estimate event sequence data without time stamps.
+But only `r pkg("relevent")` can estimate event sequence data without time stamps.
 
-- `r pkg("goldfish")` offers functions to fit and simulate actor-oriented dynamic network actor models and dyad-oriented relational event models as described in Stadtfeld et al. (2017: `r doi:("10.1177/00811750177092")`).
+- `r pkg("goldfish")` offers functions to fit and simulate actor-oriented dynamic network actor models and dyad-oriented relational event models as described in Stadtfeld et al. (2017: `r doi("10.1177/00811750177092")`).
 
 ### Discrete observations
 
-The following packages are focused on modeling series of networks, also known as panel data.
+The following package are focused on modeling series of networks, also known as panel data.
 
 - `r pkg("tergm")` a set of extensions for `r pkg("ergm")` for fitting and simulating discrete-time models for series of networks (or a long-term equilibrium of a discrete-time network process) where each time step is modeled as a draw from an ERGM conditional on the prior time steps.
 
@@ -451,7 +451,7 @@ It is compatible with ``r pkg ("igraph")`.
 - `r pkg("chessboard")` provides functions to work with un/directed undirected spatial networks. It allows to create connectivity matrices (`chessboard::connectivity_matrix`) and exports results to several formats: node list, neighbor list, edge list, connectivity matrix, Eigenvector maps.
 It also implements connectivity for chess pieces via specific functions: `chessboard::bishop`,  `chessboard::knight`, `chessboard::pawn`, `chessboard::queen`, `chessboard::rook`, besides introducing two sets of movement rules `chessboard::fool` and `chessboard::wizard`.
 
-- `r pkg("epanet2toolkit")` interfaces R with  the [EPANET](https://github.com/OpenWaterAnalytics/EPANET/releases/tag/v2.2) programmer's toolkit to carry out basic (`epanet2toolkit::ENepanet`) or customized (`epanet2toolkit::ENopen`) simulations.
+- `r pkg("epanet2toolkit")` interfaces R with  the EPANET (`r github("OpenWaterAnalytics/EPANET")`) programmer's toolkit to carry out basic (`epanet2toolkit::ENepanet`) or customized (`epanet2toolkit::ENopen`) simulations.
 
 - `r pkg("intensitynet")` includes functions to analyze point patterns in space occurring over planar network structures derived from graph-related intensity measures for un/directed and mixed networks
 
