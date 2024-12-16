@@ -69,7 +69,7 @@ The starting point for analyzing networks in R is to familiarize with the main p
   - *Approach*: This R package is built upon a C library that is shared also by implementations in Python and Mathematica. 
 The C code is efficient, and the R interface is increasingly consistent and easy to use with a lot of basic functionality, including calculating network properties, generating random graphs for simulations, etc.
 
-  - *Flexibility*: Many of the functions are provided in two versions: for direct assignment e.g., `igraph::E(net)$attribute <- x`, and a pipe-able version, `net <- igraph::set_edge_attr(net, 'attribute', value = x)`.
+  - *Flexibility*: Many of the functions are provided in two versions: for direct assignment and a pipe-able version.
   
   - *Support*: There are tons of online resources answering virtually any question concerning _how_ to do almost anything thanks to a large community and active maintainers.
   
@@ -86,8 +86,8 @@ The C code is efficient, and the R interface is increasingly consistent and easy
 - `r pkg("manynet", priority = "core")` is built upon many of the other network packages in this list and offers interoperability with many different classes of objects as well as network visualization and analytic tools.
 
   - *Approach*: Inspired by the [_tidyverse_](https://www.tidyverse.org/), `manynet` offers a piped syntax, with even more structure, consistency, and sensible defaults.
-For example, `net_*()` functions always return a single value (scalar), and `node_*()` and `tie_*()` always return a vector the length of the nodes or ties in the network, respectively.
-Similarly, `*is_*` functions always return logical values (`TRUE`/`FALSE`), and `*_in_*` returns categorical strings, for example. This helps new users and those working with multiple packages alike.
+For example, `manynet::net_*` functions always return a single value (scalar), and `manynet::node_*` and `manynet::tie_*` always return a vector the length of the nodes or ties in the network, respectively.
+Similarly, `manynet::is_*` functions always return logical values (`TRUE`/`FALSE`), for example. This helps new users and those working with multiple packages alike.
  
   - *Flexibility*: the package leverages S3 dispatching so that all the functions work with many _classes_ of network objects, such as `r pkg ("network")` or `r pkg("graph")` objects, but also edge lists, matrices, and various other more specific classes. 
 Its coercion routines retain more information than the long-standing alternative `r pkg ("intergraph")`, being able to transform between more classes and receiving more frequent updates. 
@@ -147,13 +147,13 @@ It offers a user-friendly interface for creating interactive network visualizati
 
 - `r pkg("manynet")` builds on `r pkg("ggraph")` for graphing networks in `ggplot2`-style but eases the complicated syntax and offers sensible defaults to make it easy to visualize and explore network data while retaining the flexibility to theme. 
 
-	- `manynet::graphr()` is for quick, easy network visualization.
+	- `manynet::graphr` is for quick, easy network visualization.
 
-	- `manynet::graphs()` is for comparing ego networks or subgraphs side by side.
+	- `manynet::graphs` is for comparing ego networks or subgraphs side by side.
 
-	- `manynet::grapht()` is for developing dynamic or longitudinal networks into gifs.
+	- `manynet::grapht` is for developing dynamic or longitudinal networks into gifs.
 
-	- `manynet` includes `plot()` methods for much of its output, including blockmodels and dendrograms for clustering.
+	- `manynet` includes plotting methods for much of its output, including blockmodels and dendrograms for clustering.
 
 ### Extensions for `ggplot2`
 
@@ -219,15 +219,15 @@ Model-based clustering is a probabilistic approach to grouping nodes in a networ
 
 ### Generalized blockmodeling (structural and/or regular equivalence)
 
-- `r pkg("sna")` implements a simple version of structural-equivalence blockmodel (`sna::blockmodel()`).
+- `r pkg("sna")` implements a simple version of structural-equivalence blockmodel (`sna::blockmodel`).
 It can also generate networks with a given blockmodel as well as print and plot the results.
 
 - `r pkg("concorR")` implements the classical CONCOR (Convergence of iterated Correlation) algorithm (Breiger, Boorman, and Arabie 1975: `r doi("10.1016/0022-2496(75)90028-0")`) for one- and multi-mode un/directed networks.
 
 - `r pkg("BMConcor")` allows the simultaneous blockmodeling of networks based on structural and regular equivalence through singular value decomposition (SVD) by blocks (see Lafosse and Hanafi [1997](https://eudml.org/doc/106424))
 
-- `r pkg("blockmodeling")`: this package offers and implementation of generalized blockmodeling (`blockmodeling::optRandomParC()`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
-Furthermore, it includes implementations of the REGE algorithm (`blockmodeling::REGE()`).
+- `r pkg("blockmodeling")`: this package offers and implementation of generalized blockmodeling (`blockmodeling::optRandomParC`) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. 
+Furthermore, it includes implementations of the REGE algorithm (`blockmodeling::REGE`).
 
 - `r pkg("BlockmodelingGUI")` is a Shiny app providing a graphical interface for generalized blockmodeling of single-relation, one-mode networks from the package `r pkg("blockmodeling")`.
 It includes several ways to visualize networks and partitions using `r pkg("igraph")`, `r pkg("network")`, and more.
@@ -272,7 +272,7 @@ It includes utilities to plot the results but cannot choose automatically the 'r
 
 - `r pkg("latentnet")` provides functions to fit and simulate latent position and cluster model using `r pkg("network")` objects and compatibly with `r pkg("ergm")` approaches.
 
-- `r pkg("latenetwork")` implements Hoshino and Yanagi's ([2023](https://arxiv.org/abs/2108.07455)) method for the causal inference with noncompliance and network interference of unknown form on average causal using instrumental variables.
+- `r pkg("latenetwork")` implements Hoshino and Yanagi's (2023) method for the causal inference with noncompliance and network interference of unknown form on average causal using instrumental variables.
 
 - `r pkg("netClust")` provides a function to cluster one-layer (`netClust::netEM_unilayer`) and multilayer (`netClust::netEM_multilayer`) networks by means of finite mixtures and expectation-maximization.
 
@@ -413,6 +413,8 @@ All functions are optimized for large datasets. It implements different methods 
     
 ## Networks in the natural and life sciences
 
+  - `r bioc("Rcy3")` provides access to [Cytoscape](https://cytoscape.org/), one of the most used network tool in the field of molecular biology, allowing to vizualize, analyze and explore networks using a single function for each operation executable through Cytoscape's graphical interface.
+
   - `r pkg("WGCNA")` focuses on the analysis of weighted correlation networks. It has functions for network construction, modularity computation, gene selection, topological analysis, generating data, plotting, and exports to third-party software.
 Notably, the underlying data mining approach has been used beyond the natural sciences.
 There are several packages on Bioconductor that reverse-depend/extend these functionalities.
@@ -510,7 +512,7 @@ It support different tie-weighting procedures (valued or binary), and renders th
 
 * Hoffman, Marion, Per Block, Timon Elmer, and Christoph Stadtfeld. 2020. 'A model for the dynamics of face-to-face interactions in social groups'. _Network Science_ 8(S1): S4–S25. `r doi("10.1017/nws.2020.3")`
 
-* Hoshino, Tadao, and Takahide Yanagi. "Causal Inference with Noncompliance and Unknown Interference". _arXiv_, 22 Octover 2023. https://doi.org/10.48550/arXiv.2108.07455.
+* Hoshino, Tadao, and Takahide Yanagi. "Causal Inference with Noncompliance and Unknown Interference". _arXiv_, 22 Octover 2023. `r doi("10.48550/arXiv.2108.07455")`.
 
 * Kanevsky, Gregory. 2016. 'R Graph Objects: igraph vs. network. _R Bloggers_. January 30, 2016.  https://www.r-bloggers.com/2016/01/r-graph-objects-igraph-vs-network/]
 
@@ -522,7 +524,7 @@ It support different tie-weighting procedures (valued or binary), and renders th
 
 * Leydesdorff, Loet, and Han Woo Park. 2017. ‘Full and Fractional Counting in Bibliometric Networks’. _Journal of Informetrics_ 11(1): 117–20. `r doi("10.1016/j.joi.2016.11.007")`
 
-* Martin, Evan A., and A. Fu. 2019. ‘Approximate Bayesian Inference of Directed Acyclic Graphs in Biology with Flexible Priors on Edge States’. <https://arxiv.org/abs/1909.10678")`
+* Martin, Evan A., and A. Fu. 2019. ‘Approximate Bayesian Inference of Directed Acyclic Graphs in Biology with Flexible Priors on Edge States’. `r doi("10.48550/arXiv.1909.10678")`
 
 * Matias, Catherine, and Vincent Miele. 2017. ‘Statistical Clustering of Temporal Networks through a Dynamic Stochastic Block Model’. _Journal of the Royal Statistical Society. Series B (Statistical Methodology)_ 79 (4): 1119–41. <https://www.jstor.org/stable/26773154")`
 
