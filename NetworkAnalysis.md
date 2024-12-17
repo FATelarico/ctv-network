@@ -93,7 +93,7 @@ Similarly, `manynet::is_*` functions always return logical values (`TRUE`/`FALSE
 Its coercion routines retain more information than the long-standing alternative `r pkg ("intergraph")`, being able to transform between more classes and receiving more frequent updates. 
 It also includes more complete import and export routines than generalist packages.
  
-- *Comprehensiveness*: the package wraps most of `r pkg("igraph")`'s offerings but extends or corrects them to treat many _types_ of networks, including two-mode, multiplex, and dynamic networks.
+  - *Comprehensiveness*: the package wraps most of `r pkg("igraph")`'s offerings but extends or corrects them to treat many _types_ of networks, including two-mode, multiplex, and dynamic networks.
 The package also implements a number of functions for network analysis that are not available elsewhere.
 
   - *Documentation*: The package benefits from clear and concise documentation, making it accessible to users of all levels.
@@ -448,7 +448,9 @@ It can also execute some basic operations such as computing centrality of nodes 
 
 - `r pkg("geonetwork")` handles networks or graphs whose nodes are locations. 
 The functions includes the creation of objects of class `geonetwork` as a graph with node coordinates, the computation of network measures, the support of spatial operations (projection to different coordinate reference systems, handling of bounding boxes, etc.) and the plotting of the `geonetwork` object combined with supplementary cartography for spatial representation.
-It is compatible with ``r pkg ("igraph")`.
+It is compatible with `r pkg ("igraph")`.
+
+- `r pkg("sfnetworks")` combines the work-horse spatial-data package in R (`sf`) and `r pkg("tidygraph")` for tidyverse-friendly classes and routines (shortest paths, cleaning, and editing) for geospatial networks.
 
 - `r pkg("chessboard")` provides functions to work with un/directed undirected spatial networks. It allows to create connectivity matrices (`chessboard::connectivity_matrix`) and exports results to several formats: node list, neighbor list, edge list, connectivity matrix, Eigenvector maps.
 It also implements connectivity for chess pieces via specific functions: `chessboard::bishop`,  `chessboard::knight`, `chessboard::pawn`, `chessboard::queen`, `chessboard::rook`, besides introducing two sets of movement rules `chessboard::fool` and `chessboard::wizard`.
