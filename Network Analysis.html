@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRAN Task View: NetworkAnalysis</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="citation_title" content="CRAN Task View: NetworkAnalysis" />
+  <meta name="citation_author" content="Fabio Ashtar Telarico (@FATelarico), Pavel N. Krivitsky (@krivit), James Hollway (@jhollway)" />
+  <meta name="citation_publication_date" content="2024-12-05" />
+  <meta name="DC.title" content="CRAN Task View: NetworkAnalysis" />
+  <meta name="DC.creator" content="Fabio Ashtar Telarico (@FATelarico), Pavel N. Krivitsky (@krivit), James Hollway (@jhollway)" />
+  <meta name="DC.issued" content="2024-12-05" />
+  <meta name="og:title" content="CRAN Task View: NetworkAnalysis" />
+  <meta name="og:description" content="This CRAN Task View provides a curated list of R packages for analyzing and modelling networks (also known as relational data or graphs). These tools facilitate the exploration of natural, social, and other phenomena by focusing on the relationships between entities." />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+</head>
+
+<body>
+  <h2>CRAN Task View: NetworkAnalysis</h2>
+  <table>
+    <tr><td style="vertical-align: top;"><b>Maintainer:</b></td><td>Fabio Ashtar Telarico (@FATelarico), Pavel N. Krivitsky (@krivit), James Hollway (@jhollway)</td></tr>
+    <tr><td style="vertical-align: top;"><b>Contact:</b></td><td>&#x46;&#x61;&#x62;&#x69;&#x6f;&#x2d;&#x41;&#x73;&#x68;&#x74;&#x61;&#x72;&#x2e;&#x54;&#x65;&#x6c;&#x61;&#x72;&#x69;&#x63;&#x6f;&#x20;&#x61;&#x74;&#x20;&#x66;&#x64;&#x76;&#x2e;&#x75;&#x6e;&#x69;&#x2d;&#x6c;&#x6a;&#x2e;&#x73;&#x69;</td></tr>
+    <tr><td style="vertical-align: top;"><b>Version:</b></td><td>2024-12-05</td></tr>
+    <tr><td style="vertical-align: top;"><b>Source:</b></td><td><a href="https://github.com/FATelarico/ctv-network">https://github.com/FATelarico/ctv-network</a></td></tr>
+    <tr><td style="vertical-align: top;"><b>Citation:</b></td><td>Fabio Ashtar Telarico (@FATelarico), Pavel N. Krivitsky (@krivit), James Hollway (@jhollway) (2024). CRAN Task View: NetworkAnalysis. Version 2024-12-05.</td></tr>
+  </table>
+
+<p>This CRAN Task View provides a curated list of R packages for analyzing and modelling networks (also known as <em>relational data</em> or <em>graphs</em>). These tools facilitate the exploration of natural, social, and other phenomena by focusing on the relationships between entities.</p>
+<p>This page lists a number of packages, and sometimes core functions, in several sections based on their scope and focus:</p>
+<ol type="1">
+<li><p>The first section outlines the main ecosystems of R packages that include basic network-analytic operations such as creating, manipulating, and describing relational data. Here we also list choices of graphical packages for visualizing or drawing networks. For those new to network analysis in R, we recommend starting with the <a href="https://igraph.org/c/doc/igraph-Introduction.html"><code>igraph</code> introduction</a> or the <a href="https://statnet.org/workshop-intro-sna-tools/"><code>statnet</code> tutorial</a>.</p></li>
+<li><p>Subsequently, packages and functions for advanced network-analytical tasks are presented. We currently structure these into three subsections: (1) centrality, (2) community detection, and (3) model-based clustering.</p></li>
+<li><p>Then, packages offering modelling and inferential tools applicable across disciplines and fields of interest are discussed. A distinction is drawn between models that are primarily for cross-sectional anddynamic data, with an extra section on special models for multimodal, multilevel, and multiplex data.</p></li>
+<li><p>Finally, the focus shifts to packages containing data structures, methods, and models with a narrower field of application. The list includes some of the areas where network methods are more widely applied: ecology, bibliometrics, life and natural sciences, neurosciences, psychology, public health, social sciences and economics.</p></li>
+</ol>
+<p>The list excludes packages that primarily deal with graph representations of conditional in/dependence between variables. This includes Bayesian networks and Markovian graphs, which, despite their relevance to statistical modeling, are covered under the CRAN TaskView <a href="https://CRAN.R-project.org/view=GraphicalModels">GraphicalModels</a>. This distinction keeps the list focused on network analysis to explore broader relational dynamics.</p>
+<p>Some packages could appear under multiple headings because they can perform multiple tasks (e.g., clustering and visualization). But, for the sake of brevity, non-core packages are listed only once: in the section that described each package’s main use case.</p>
+<p>If you think that a package is missing from the list, please file an issue in the GitHub repository or contact the maintainer.</p>
+<!-- TOC start -->
+<h1 id="table-of-contents">Table of contents</h1>
+<ul>
+<li><a href="#ecosystems">Ecosystems</a>
+<ul>
+<li><a href="#network-construction">Network construction</a></li>
+<li><a href="#visualization">Visualization</a></li>
+</ul></li>
+<li><a href="#network-analysis">Network analysis</a>
+<ul>
+<li><a href="#centrality">Centrality</a></li>
+<li><a href="#community-detection">Community detection</a></li>
+<li><a href="#model-based-clustering">Model-based clustering</a></li>
+</ul></li>
+<li><a href="#statistical-modeling">Statistical modeling</a>
+<ul>
+<li><a href="#cross-sectional-networks">Cross-sectional networks</a></li>
+<li><a href="#multimodal-and-multilevel-networks">Multimodal and multilevel networks</a></li>
+<li><a href="#dynamic-networks">Dynamic networks</a></li>
+</ul></li>
+<li><a href="#field-packages">Field packages</a>
+<ul>
+<li><a href="#ecological-networks">Ecological networks</a></li>
+<li><a href="#bibliometric-networks">Bibliometric networks</a></li>
+<li><a href="#networks-in-the-natural-and-life-sciences">Networks in the natural and life sciences</a></li>
+<li><a href="#neurosciences-and-psychology">Neurosciences and psychology</a></li>
+<li><a href="#spatial-networks">Spatial networks</a></li>
+<li><a href="#public-health-networks">Public-health networks</a></li>
+<li><a href="#social-and-economic-networks">Social and economic networks</a></li>
+</ul></li>
+<li><a href="#references">References</a> <!-- TOC end --></li>
+</ul>
+<!-- TOC end -->
+<h1 id="ecosystems">Ecosystems</h1>
+<p>The starting point for analyzing networks in R is to familiarize with the main package ‘families’ or ecosystems. Using them, users can access functions to create, import/export, edit, and otherwise operate on relational data.</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=igraph">igraph</a> provides tools for creating, manipulating, and analyzing network structures with a focus on graphical representations and fast algorithms to operate on large datasets (particularly manipulating data and dealing with vertex attributes). Rather than coming bundled with other packages, <a href="https://CRAN.R-project.org/package=igraph">igraph</a> offers an ecosystem of extensions and add-ons.</p>
+<ul>
+<li><p><em>Approach</em>: This R package is built upon a C library that is shared also by implementations in Python and Mathematica. The C code is efficient, and the R interface is increasingly consistent and easy to use with a lot of basic functionality, including calculating network properties, generating random graphs for simulations, etc.</p></li>
+<li><p><em>Flexibility</em>: Many of the functions are provided in two versions: for direct assignment e.g., <code>igraph::E(net)$attribute &lt;- x</code>, and a pipe-able version, <code>net &lt;- igraph::set_edge_attr(net, 'attribute', value = x)</code>.</p></li>
+<li><p><em>Support</em>: There are tons of online resources answering virtually any question concerning <em>how</em> to do almost anything thanks to a large community and active maintainers.</p></li>
+<li><p><em>Extensions</em>: There are a number of add-on packages that integrate igraph with <a href="https://CRAN.R-project.org/package=ggplot2">ggplot2</a> and other drawing tools or provide sample datasets. According to the latest review this is the largest network-analysis ecosystem in R by number of extensions (see Kanevsky 2016).</p></li>
+</ul></li>
+<li><p><a href="https://CRAN.R-project.org/package=statnet">statnet</a>, sometimes used only as <a href="https://CRAN.R-project.org/package=sna">sna</a> and/or <a href="https://CRAN.R-project.org/package=network">network</a> is a more organic family of packages for statistical network analysis built upon common data representations and design choices. But there are also ‘add-ons’, although not as many as in the previous ecosystem.</p>
+<ul>
+<li><p><em>Approach</em>: The approach in this group of packages is more disaggregated and involves a number of different packages for different purposes. Not least, they provide support to the packages in the <a href="https://CRAN.R-project.org/package=ergm">ergm</a> family.</p></li>
+<li><p><em>Flexibility</em>: The packages in <a href="https://CRAN.R-project.org/package=statnet">statnet</a> can be used to analyze (social) network data using both direct assignment and a ‘piped’ approach.</p></li>
+<li><p><em>Comprehensiveness</em>: This ecosystem’s biggest advantage is that it allows users to carry out most network-analytical operations, especially in dealing with social network analysis (SNA). But the trade-off, of course, is that the number of possibilities makes life harder for new users.</p></li>
+</ul></li>
+<li><p><a href="https://CRAN.R-project.org/package=manynet">manynet</a> is built upon many of the other network packages in this list and offers interoperability with many different classes of objects as well as network visualization and analytic tools.</p>
+<ul>
+<li><p><em>Approach</em>: Inspired by the <a href="https://www.tidyverse.org/"><em>tidyverse</em></a>, <code>manynet</code> offers a piped syntax, with even more structure, consistency, and sensible defaults. For example, <code>net_*()</code> functions always return a single value (scalar), and <code>node_*()</code> and <code>tie_*()</code> always return a vector the length of the nodes or ties in the network, respectively. Similarly, <code>*is_*</code> functions always return logical values (<code>TRUE</code>/<code>FALSE</code>), and <code>*_in_*</code> returns categorical strings, for example. This helps new users and those working with multiple packages alike.</p></li>
+<li><p><em>Flexibility</em>: the package leverages S3 dispatching so that all the functions work with many <em>classes</em> of network objects, such as <a href="https://CRAN.R-project.org/package=network">network</a> or <a href="https://CRAN.R-project.org/package=graph">graph</a> objects, but also edge lists, matrices, and various other more specific classes. Its coercion routines retain more information than the long-standing alternative <a href="https://CRAN.R-project.org/package=intergraph">intergraph</a>, being able to transform between more classes and receiving more frequent updates. It also includes more complete import and export routines than generalist packages.</p></li>
+</ul></li>
+<li><p><em>Comprehensiveness</em>: the package wraps most of <a href="https://CRAN.R-project.org/package=igraph">igraph</a>’s offerings but extends or corrects them to treat many <em>types</em> of networks, including two-mode, multiplex, and dynamic networks. The package also implements a number of functions for network analysis that are not available elsewhere.</p>
+<ul>
+<li><em>Documentation</em>: The package benefits from clear and concise documentation, making it accessible to users of all levels. Additionally, it offers straightforward tutorials and examples to help users get started with network analysis in R. Further explanation, examples, and references are continually being to the documentation to provide user reference and support user experience.</li>
+</ul></li>
+</ul>
+<h2 id="network-construction">Network construction</h2>
+<p>Although the ‘core’ packages for network analysis in R can create a wide range of networks from different types of inputs, there are also specialized packages for constructing more specialized formats or for converting or coercing between different formats.</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=intergraph">intergraph</a> is not a network analysis package <em>per se</em>. Rather it allows to easily convert objects produced by <a href="https://CRAN.R-project.org/package=statnet">statnet</a> packages into <a href="https://CRAN.R-project.org/package=igraph">igraph</a> objects (or a data frame) and vice versa. Thus, it helps leveraging multiple packages’ functionalities and ensuring compatibility between several users’ workflows too many additional functionalities.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=BoolNet">BoolNet</a> provides tools for assembling, analyzing and visualizing synchronous and asynchronous (probabilistic) Boolean networks as well as simpler Boolean networks. All the main functions are described in a handy <a href="https://cran.r-project.org/web/packages/BoolNet/vignettes/BoolNet_package_vignette.pdf">vignette</a>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=egor">egor</a> allows to create ego-centric networks starting from exports from <em>EgoNet</em>(<a href="https://github.com/egonet/egonet">egonet</a>), <a href="https://www.qualintitative.com/egoweb/"><em>EgoWeb 2.0</em></a> and <em>openeddi</em>(<a href="https://github.com/jfaganUK/openeddi">openeddi</a>). It includes a Shiny app and procedures for creating and visualizing clustered graphs.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ionet">ionet</a> creates network starting by turning input-output tables into weighted adjacency matrices.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=rgraph6">rgraph6</a> allows to encode relational data (adjacency matrices, edge lists, <a href="https://CRAN.R-project.org/package=network">network</a> and <a href="https://CRAN.R-project.org/package=igraph">igraph</a> objects) as ASCII strings and vice versa using <code>graph6</code>, <code>sparse6</code>, and <code>digraph6</code> <a href="http://users.cecs.anu.edu.au/~bdm/data/formats.txt">formats</a>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=tidygraph">tidygraph</a> is designed for handling and manipulating graph data within the <a href="https://www.tidyverse.org/"><em>tidyverse</em></a> framework. It does not make it into ‘core’ packages because it lacks a comprehensive set of tools for network analysis. Yet, it provides a flexible piped approach to working with relational data, allowing users to apply familiar data manipulation techniques from the tidyverse to graphs. Users can easily perform tasks such as filtering, summarizing, and joining graph data using familiar tidyverse syntax. Given that both <a href="https://CRAN.R-project.org/package=igraph">igraph</a> and <a href="https://CRAN.R-project.org/package=sna">sna</a> provide piped functions for most operations, <a href="https://CRAN.R-project.org/package=tidygraph">tidygraph</a>’s added value lies mainly in the possibility of accessing directly either the node data, the edge data or the graph itself while computing inside verbs.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=backbone">backbone</a> enables the extraction of the sparse and unweighted subgraph of a network called ‘backbone’.</p></li>
+</ul>
+<h2 id="visualization">Visualization</h2>
+<h3 id="interactive-visualization">Interactive visualization</h3>
+<p>More details in the CRAN TaskView <a href="https://CRAN.R-project.org/view=DynamicVisualizations">DynamicVisualizations</a>.</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=visNetwork">visNetwork</a> focuses on interactive network visualization using the <code>vis.js</code> library (<a href="https://github.com/visjs">NA</a>). The package allows users to create visually appealing and interactive network visualizations with features such as zooming, panning, and node highlighting. It offers a user-friendly interface for creating interactive network visualizations, making it suitable for un-experienced users.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=networkD3">networkD3</a> provides functions that turns edge lists into a D3 JavaScript(<a href="https://github.com/d3/d3">d3</a>) network, tree, dendrogram, or Sankey plots.</p>
+<ul>
+<li><a href="https://CRAN.R-project.org/package=bipartiteD3">bipartiteD3</a> uses the <code>D3</code> and <code>viz.js</code> libraries for plotting networks produced with the <a href="https://CRAN.R-project.org/package=bipartite">bipartite</a> package.</li>
+</ul></li>
+</ul>
+<h3 id="static-visualization">Static visualization</h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=diagram">diagram</a> was born as a companion to the book <em>A practical guide to ecological modelling</em> by K. Soetaert and P.M.J. Herman. But it can visualize as a flow diagram, a web or grid any network given in the form of a transition matrix.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ndtv">ndtv</a> renders network objects from the package <a href="https://CRAN.R-project.org/package=networkDynamic">networkDynamic</a> as videos or interactive animations.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=neatmaps">neatmaps</a> tries to simplify the exploratory step of data analysis by providing function to easily produce hierarchical clustering (<code>neatmaps::hierarchy</code>), consensus clustering (<code>neatmaps::consClustResTable</code>) and heatmaps of multiple networks (<code>neatmaps::neatmap</code>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=manynet">manynet</a> builds on <a href="https://CRAN.R-project.org/package=ggraph">ggraph</a> for graphing networks in <code>ggplot2</code>-style but eases the complicated syntax and offers sensible defaults to make it easy to visualize and explore network data while retaining the flexibility to theme.</p>
+<ul>
+<li><p><code>manynet::graphr()</code> is for quick, easy network visualization.</p></li>
+<li><p><code>manynet::graphs()</code> is for comparing ego networks or subgraphs side by side.</p></li>
+<li><p><code>manynet::grapht()</code> is for developing dynamic or longitudinal networks into gifs.</p></li>
+<li><p><code>manynet</code> includes <code>plot()</code> methods for much of its output, including blockmodels and dendrograms for clustering.</p></li>
+</ul></li>
+</ul>
+<h3 id="extensions-for-ggplot2">Extensions for <code>ggplot2</code></h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=ggnetwork">ggnetwork</a> offers geometries to plot <a href="https://CRAN.R-project.org/package=network">network</a> objects.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ggraph">ggraph</a> allows to plot <a href="https://CRAN.R-project.org/package=igraph">igraph</a> objects by building up plots layer by layer.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ggsom">ggsom</a> offers functions to plot self-organizing maps (SOMs).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=snahelper">snahelper</a> is an add-on allowing access to a GUI for visualizing and analyzing networks. Once the visualization is set, the relevant code is automatically added to the script.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=roughnet">roughnet</a> leverages the <em>rough.js</em> (<a href="https://github.com/rough-stuff/rough">rough</a>) library to draw sketchy, hand-drawn-like networks</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=gganimate">gganimate</a> allows to produce GIFs and MP4s version of evolving <code>ggplots</code>, including those representing networks.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ggdendro">ggdendro</a> makes it easy to make ggplots of dendrograms create using the functions <code>tree</code>, <code>hclust</code>, <code>dendrogram</code>, and <code>rpart</code>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=multigraph">multigraph</a> is a powerful tool providing easier visualizations of multigraphs, valued/signed networks, bipartite networks, multilevel networks, and Cayley graphs with various layout options.</p></li>
+</ul>
+<h3 id="layouts">Layouts</h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=ggforce">ggforce</a> offers functions for specialized plots, some of which also find application in network analysis. Most importantly, alluvial plots can be used to visualize composition of groups in a dynamic network.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=graphlayouts">graphlayouts</a> adds several layout algorithms to <a href="https://CRAN.R-project.org/package=igraph">igraph</a> and <a href="https://CRAN.R-project.org/package=ggraph">ggraph</a> based on the concept of stress majorization (See also <a href="https://CRAN.R-project.org/package=edgebundle">edgebundle</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=manynet">manynet</a> includes a few more layout algorithms for multimodal networks.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=RGraphViz">RGraphViz</a>, available on Bioconductor (<a href="https://www.Bioconductor.org/packages/Rgraphviz">Rgraphviz</a>), creates a direct link between the <a href="https://CRAN.R-project.org/package=graph">graph</a> package and the <code>graphviz</code> library.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=patchwork">patchwork</a> allows for arbitrarily complex composition of plots that can be used, for example, in visualizing multipartite and other complex networks.</p></li>
+</ul>
+<h1 id="network-analysis">Network analysis</h1>
+<p><a href="https://CRAN.R-project.org/package=igraph">igraph</a>, <a href="https://CRAN.R-project.org/package=sna">sna</a>, and <a href="https://CRAN.R-project.org/package=manynet">manynet</a> offer functions for a similar set of network-analytic operations, whereas <a href="https://CRAN.R-project.org/package=tidygraph">tidygraph</a> is more limited. However, some algorithms differ from each other and from those are some specialized packages for their implementation, speed, or defaults.</p>
+<h2 id="centrality">Centrality</h2>
+<p>Both main ecosystems can compute betweenness, eigenvalue, power, and closeness centrality, but <a href="https://CRAN.R-project.org/package=igraph">igraph</a> offers more options than <a href="https://CRAN.R-project.org/package=sna">sna</a> and <a href="https://CRAN.R-project.org/package=tidygraph">tidygraph</a> overall. In addition:</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=centiserve">centiserve</a> adds dozens of centrality measures for <a href="https://CRAN.R-project.org/package=igraph">igraph</a> objects such as bottleneck, decay, and entropy centrality.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=birankr">birankr</a> provides optimized functions for estimating various centrality measures in bipartite/two-mode networks. It can also estimate efficiently page-rank in one-mode networks, project two-mode networks to one-mode ones, and convert edge lists and matrices to the <code>sparseMatrix</code> format offered in the package <a href="https://CRAN.R-project.org/package=Matrix">Matrix</a>. It supports edge lists (in the <code>data.frame</code>, <code>data.table::data.table</code>, or <code>tidydata::tbl_df</code> class) and adjacency matrices (either in the built-in <code>matrix</code> class or in <code>Matrix</code>’s <code>dgCMatrix</code> class).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=netrankr">netrankr</a> offers index-free centrality rankings via <em>neighborhood-inclusion</em> or <em>positional dominance</em> and based on probabilistic methods like computing expected node ranks and relative rank probabilities (see also Schoch 2018: <a href="https://doi.org//10.1016/j.socnet.2017.12.003">doi:/10.1016/j.socnet.2017.12.003</a>).</p></li>
+</ul>
+<h2 id="community-detection">Community detection</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=igraph">igraph</a> is the package of choice for the implementation of most modularity-based community-detection algorithms. Available approaches include betweenness, greedy algorithm, infomap, label propagation Leiden, Generalized Louvain, and walktrap amongst others.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=cencrne">cencrne</a> proposes a regularized network-embedding model to simultaneously estimate the community structure and the number of communities in an asymptotically consistent way. The method is mainly used in life sciences but is applicable across the board.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=linkcomm">linkcomm</a> provides functions for generating, visualizing, and analyzing overlapping communities in networks of arbitrary size and type. Unlike <a href="https://CRAN.R-project.org/package=igraph">igraph</a> and <a href="https://CRAN.R-project.org/package=network">network</a>, it can compute relatedness <code>linkcomm::getClusterRelatedness</code> and <code>linkcomm::getCommunityConnectedness</code> as well as generate a mesoscopic matrix (<code>linkcomm::getCommunityMatrix</code>). Moreover, it can produce membership for hierarchical communities (<code>linkcomm::getNestedHierarchies</code>).</p></li>
+</ul>
+<h2 id="model-based-clustering">Model-based clustering</h2>
+<p>Model-based clustering is a probabilistic approach to grouping nodes in a network based on their connectivity patterns, assuming that the data arise from a (mixture of) latent distribution(s). These methods are particularly effective for identifying undetected structures and capturing uncertainty in network partitions.</p>
+<h3 id="generalized-blockmodeling-structural-andor-regular-equivalence">Generalized blockmodeling (structural and/or regular equivalence)</h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=sna">sna</a> implements a simple version of structural-equivalence blockmodel (<code>sna::blockmodel()</code>). It can also generate networks with a given blockmodel as well as print and plot the results.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=concorR">concorR</a> implements the classical CONCOR (Convergence of iterated Correlation) algorithm (Breiger, Boorman, and Arabie 1975: <a href="https://doi.org/10.1016/0022-2496(75)90028-0">doi:10.1016/0022-2496(75)90028-0</a>) for one- and multi-mode un/directed networks.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=BMConcor">BMConcor</a> allows the simultaneous blockmodeling of networks based on structural and regular equivalence through singular value decomposition (SVD) by blocks (see Lafosse and Hanafi <a href="https://eudml.org/doc/106424">1997</a>)</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=blockmodeling">blockmodeling</a>: this package offers and implementation of generalized blockmodeling (<code>blockmodeling::optRandomParC()</code>) as well as functions for computation of (dis)similarities in terms of structural or regular equivalence and plotting. Furthermore, it includes implementations of the REGE algorithm (<code>blockmodeling::REGE()</code>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=BlockmodelingGUI">BlockmodelingGUI</a> is a Shiny app providing a graphical interface for generalized blockmodeling of single-relation, one-mode networks from the package <a href="https://CRAN.R-project.org/package=blockmodeling">blockmodeling</a>. It includes several ways to visualize networks and partitions using <a href="https://CRAN.R-project.org/package=igraph">igraph</a>, <a href="https://CRAN.R-project.org/package=network">network</a>, and more.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=kmBlock">kmBlock</a> implements a k-means like approach to the blockmodeling of one-mode and linked networks as presented in Žiberna (2020: <a href="https://doi.org/10.1016/j.socnet.2019.10.006">doi:10.1016/j.socnet.2019.10.006</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=dBlockmodeling">dBlockmodeling</a> contains functions to apply blockmodeling of signed (positive and negative weights are assigned to the links), one-mode and valued one-mode and two-mode.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=signnet">signnet</a> offers to functions implementing the generalized blockmodeling with structural equivalence (<code>signnet::signed_blockmodel</code>) and generalized equivalence (<code>signnet::signed_blockmodel_general</code>) of signed networks based on objects from <a href="https://CRAN.R-project.org/package=igraph">igraph</a></p></li>
+<li><p><a href="https://CRAN.R-project.org/package=oaqc">oaqc</a> enables efficient computation of the orbit-aware quad census from Ortmann and Brandes (2017: <a href="https://doi.org/10.1007/s41109-017-0027-2">doi:10.1007/s41109-017-0027-2</a>).</p></li>
+</ul>
+<h3 id="stochastic-blockmodeling-sbm">Stochastic blockmodeling (SBM)</h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=igraph">igraph</a> cannot run SBMs, but it can generate a random graph according to a specified SBM (<code>igraph::sample_sbm</code>) or an arbitrary hierarchical SBM (<code>igraph::sample_hierarchical_sbm</code>)</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=blockmodels">blockmodels</a> allows to run the SBM or the Latent Block Model (LBM, an SBM for bipartite networks) of static networks using a Variational Expectation Maximization algorithm. Various <code>S4</code> functions implement three probability distributions: <code>blockmodels::BM_bernoulli</code> for binary data, <code>blockmodels::BM_poisson</code> for discrete/count weights, <code>blockmodels::BM_gaussian</code> for continuous weights. It allows for SBMs and LBM with or without node covariates and supports multiplex binary networks via <code>blockmodels::BM_bernoulli_multiplex</code>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=sbm">sbm</a> is an extension of <code>blockmodels</code> for bi- and multi-partite as well as multiplex networks as proposed by Barbillon and colleagues (2017: <a href="https://doi.org/10.1111/rssa.12193">doi:10.1111/rssa.12193</a>) through dedicated <code>R6</code> classes. It includes functions to plot the resulting partition.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=greed">greed</a> leverages a combination of greedy local search and a genetic algorithm (see Côme et al 2021: <a href="https://doi.org/10.1007/s11634-021-00440-z">doi:10.1007/s11634-021-00440-z</a>) to execute (degree-corrected) SBM and LBM.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=dynsbm">dynsbm</a>, archived from the CRAN repository on 2023-10-27 due to a faulty dependence, implements the model for temporal networks presented in Matias and Miele (2020: <a href="https://doi.org/10.1111/rssb.12200">doi:10.1111/rssb.12200</a>) which combines a static SBM with independent Markov chains for the dynamic part. It supports binary and weighted networks with both discrete and continuous edges. Includes also functions for plotting (<code>dynsbm::adjacency.plot</code>, <code>dynsbm::alluvial.plot</code>, <code>dynsbm::connectivity.plot</code>) the partition and automatically constructs matrices as an array of the right format.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=MLVSBM">MLVSBM</a> Implements the SBM of multilevel networks where the different matrices each represent an interaction layer either weighter or binary. It generalizes the approach proposed by Chabert-Liddell et al. (2021: <a href="https://doi.org/10.1016/j.csda.2021.107179">doi:10.1016/j.csda.2021.107179</a>) to more than two layers.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=StochBlock">StochBlock</a> implements the stochastic blockmodeling of one-mode and linked networks as implemented in Škulj and Žiberna (2022: <a href="https://doi.org/10.1016/j.socnet.2022.12.003">doi:10.1016/j.socnet.2022.12.003</a>). It includes utilities to plot the results but cannot choose automatically the ‘right’ number of clusters and tends to be very slow according to subsequent reviews (see Cugmas and Žiberna [2023]).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=GREMLINS">GREMLINS</a> implements the SBM of generalized multipartite networks where the different matrices each involve nodes that can be partitioned into a-priori defined <em>functional groups</em> as proposed by Bar-Hen, Barbillon, and Donnet (2018: <a href="https://doi.org/10.1177/1471082X20963254">doi:10.1177/1471082X20963254</a>).</p></li>
+</ul>
+<h3 id="others">Others</h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=clustNet">clustNet</a> allows to cluster units in a network using a Bayesian mixture model that can account for node and edge covariates.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=collpcm">collpcm</a> provides Monte-Carlo Markov Chain (MCMC) inference for collapsed latent space models that allow to search over the model space, including deciding on the number of clusters.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=graphclust">graphclust</a> implements an agglomerative algorithm to maximize the integrated classification likelihood criterion and a mixture of stochastic block models based on <a href="https://CRAN.R-project.org/package=igraph">igraph</a> objects.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=latentnet">latentnet</a> provides functions to fit and simulate latent position and cluster model using <a href="https://CRAN.R-project.org/package=network">network</a> objects and compatibly with <a href="https://CRAN.R-project.org/package=ergm">ergm</a> approaches.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=latenetwork">latenetwork</a> implements Hoshino and Yanagi’s (<a href="https://arxiv.org/abs/2108.07455">2023</a>) method for the causal inference with noncompliance and network interference of unknown form on average causal using instrumental variables.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=netClust">netClust</a> provides a function to cluster one-layer (<code>netClust::netEM_unilayer</code>) and multilayer (<code>netClust::netEM_multilayer</code>) networks by means of finite mixtures and expectation-maximization.</p></li>
+</ul>
+<h1 id="statistical-modeling">Statistical modeling</h1>
+<p>Statistical modelling in network analysis enables researchers to uncover patterns, test hypotheses, and make predictions about network structures and dynamics. This section introduces R packages that support a range of statistical approaches, from modelling static (cross-sectional) networks to analyzing dynamic, multimodal, and multilevel networks. These methods provide tools to infer underlying processes that generate observed network data, assess the significance of observed patterns, and simulate network structures under various conditions.</p>
+<h2 id="cross-sectional-networks">Cross-sectional networks</h2>
+<ul>
+<li><a href="https://CRAN.R-project.org/package=ergm">ergm</a> provides functions to fit, simulate and analyze exponential-family random graph models (ERGM). Depending on specific needs, several specialized extensions are available.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Use case</th>
+<th>Package</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Count weights</td>
+<td><a href="https://CRAN.R-project.org/package=ergm.count">ergm.count</a></td>
+</tr>
+<tr class="even">
+<td>Egocentrically sampled networks</td>
+<td><a href="https://CRAN.R-project.org/package=ergm.ego">ergm.ego</a></td>
+</tr>
+<tr class="odd">
+<td>Multilayer networks and samples of networks</td>
+<td><a href="https://CRAN.R-project.org/package=ergm.multi">ergm.multi</a></td>
+</tr>
+<tr class="even">
+<td>Rank-order networks</td>
+<td><a href="https://CRAN.R-project.org/package=ergm.rank">ergm.rank</a></td>
+</tr>
+<tr class="odd">
+<td>Modeling ERGM-generating processes</td>
+<td><a href="https://CRAN.R-project.org/package=ergmgp">ergmgp</a></td>
+</tr>
+<tr class="even">
+<td>Fit ERGM to small networks</td>
+<td><a href="https://CRAN.R-project.org/package=ergmgp">ergmgp</a></td>
+</tr>
+<tr class="odd">
+<td>Small hierarchical ERGMs</td>
+<td><a href="https://CRAN.R-project.org/package=lightergm">lightergm</a></td>
+</tr>
+<tr class="even">
+<td>Large hierarchical ERGMs</td>
+<td><a href="https://CRAN.R-project.org/package=biergm">biergm</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=amen">amen</a> offers additive and multiplicative effect (AME) models with regression terms, covariance structure of the social relations model (Warner, Kenny and Stoto (1979: <a href="https://doi.org/10.1037/0022-3514.37.10.1742">doi:10.1037/0022-3514.37.10.1742</a>), and multiplicative factor models (Hoff 2009: <a href="https://doi.org/10.1007/s10588-008-9040-4">doi:10.1007/s10588-008-9040-4</a>). It supports binary networks as well as valued ones (assuming a Gaussian, zero-inflated/tobit, ordinal, or fixed-rank nomination model)</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=bootnet">bootnet</a> implements bootstrap procedures to assess accuracy and stability of estimated structures and centrality indices on undirected networks (For an alternative see <a href="https://CRAN.R-project.org/package=localboot">localboot</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=fastnet">fastnet</a> allows to simulate large-scale social networks and retrieve their most relevant metrics following the approach proposed by Dong, Castro, and Shaikh (2020: <a href="https://doi.org/10.18637/jss.v096.i07">doi:10.18637/jss.v096.i07</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=nda">nda</a> gathers non-parametric dimensionality-reduction functions with/out (automated) feature selection and limited plotting capabilities.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=lolog">lolog</a> implements Latent Order Logistic (LOLOG) models, a network formation process in which edges are added one at a time drawn from a distribution conditional on edges already added, with order unknown.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=MoNAn">MoNAn</a> implements the method to analyze the structure of weighted mobility networks or distribution networks outlined in Block et al (2022: <a href="https://doi.org/10.1016/j.socnet.2021.08.003">doi:10.1016/j.socnet.2021.08.003</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ERPM">ERPM</a> extends exponential random graph models (ERGMs) to explain cross-sectional or longitudinal observed partitions, i.e. sets of non-overlapping groups, such as face-to-face interactions, animal herds, or political coalitions, through group formation processes based on individual attributes, relations between individuals, and size-related factors.</p></li>
+</ul>
+<h2 id="multimodal-and-multilevel-networks">Multimodal and multilevel networks</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=migraph">migraph</a> is an <a href="https://CRAN.R-project.org/package=igraph">igraph</a> extension to analyze multimodal networks as described in Knoke, Diani, Hollway, and Christopoulos (2021: <a href="https://doi.org/10.1017/9781108985000">doi:10.1017/9781108985000</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=multinets">multinets</a> is an <a href="https://CRAN.R-project.org/package=igraph">igraph</a> extension to analyze multilevel networks as described in Lazega and Snijders (2016: <a href="https://doi.org/10.1007/978-3-319-24520-1">doi:10.1007/978-3-319-24520-1</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=multiplex">multiplex</a> makes possible, among other things, to create and manipulate multiplex, multimode, and multilevel network data with different formats (2020: <a href="https://doi.org/10.18637%2Fjss.v092.i11">doi:10.18637%2Fjss.v092.i11</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=dyads">dyads</a> offers functions for the MCMC simulation of dyadic network models j2, p2 (also multilevel) and b2 model.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=tnet">tnet</a> includes functions for analyzing two-mode, weighted, and longitudinal networks.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=incidentally">incidentally</a> implements methods to generate incidence matrices as described in Neal (2022: <a href="https://doi.org/10.31219/osf.io/ectms">doi:10.31219/osf.io/ectms</a>).</p></li>
+</ul>
+<h2 id="dynamic-networks">Dynamic networks</h2>
+<p>The following packages focus on modeling and simulation of networks that evolve over time and network processes that occur over time.</p>
+<h3 id="dynamics-and-diffusion">Dynamics and diffusion</h3>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=networkDynamic">networkDynamic</a> from <a href="https://CRAN.R-project.org/package=statnet">statnet</a> allows the management of dynamic networks.</p>
+<ul>
+<li><a href="https://CRAN.R-project.org/package=tsna">tsna</a> is used to analyze them.</li>
+<li><a href="https://CRAN.R-project.org/package=EpiModel">EpiModel</a> allows to simulate mathematical models of infectious disease dynamics.</li>
+</ul></li>
+<li><p><a href="https://CRAN.R-project.org/package=manynet">manynet</a> can manipulate, visualize, and analyze longitudinal and network event data, including running contagion/diffusion processes and compartmental models.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=netdiffuseR">netdiffuseR</a> was developed as part of Valente et al. (2015: <a href="https://doi.org/10.1016/j.socscimed.2015.10.001">doi:10.1016/j.socscimed.2015.10.001</a>). The package is for empirical statistical analysis, visualization and simulation of network diffusion and contagion processes. It implements algorithms for calculating network diffusion statistics such as transmission rate, hazard rates, exposure models, network threshold levels, infectiousness (contagion), and susceptibility.</p></li>
+</ul>
+<h3 id="relational-events">Relational events</h3>
+<p>Relational event data contains information about exact times during which the nodes interact. This is commonly observed for e-mail, radio, and other communications.</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=rem">rem</a> and <a href="https://CRAN.R-project.org/package=relevent">relevent</a> both contain functions to fit and simulate dyad-oriented relational event models. But only <a href="https://CRAN.R-project.org/package=relevent">relevent</a> can estimate event sequence data without time stamps.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=goldfish">goldfish</a> offers functions to fit and simulate actor-oriented dynamic network actor models and dyad-oriented relational event models as described in Stadtfeld et al. (2017: <a href="https://doi.org/10.1177/00811750177092">doi:10.1177/00811750177092</a>).</p></li>
+</ul>
+<h3 id="discrete-observations">Discrete observations</h3>
+<p>The following package are focused on modeling series of networks, also known as panel data.</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=tergm">tergm</a> a set of extensions for <a href="https://CRAN.R-project.org/package=ergm">ergm</a> for fitting and simulating discrete-time models for series of networks (or a long-term equilibrium of a discrete-time network process) where each time step is modeled as a draw from an ERGM conditional on the prior time steps.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=dnr">dnr</a> estimation of discrete-time models for series of networks where each time-step is modeled as a draw from an ERGM conditional on prior time steps, subject to the constraint that within each time step, edge variables are independent. Varying node sets are also supported.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=btergm">btergm</a> bootstrap inference for discrete-time models for series of networks where each time step is modeled as a draw from an ERGM conditional on the prior time steps.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=RSiena">RSiena</a> estimation of continuous-time Stochastic Actor-Oriented Models (SAOMs) for panel network data.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=idopNetwork">idopNetwork</a> implments the model proposed by Cao et al (2022: <a href="https://doi.org/10.1080/19490976.2022.2106103">doi:10.1080/19490976.2022.2106103</a>) to convert static data into their ‘dynamic’ form contextually inferring informative, dynamic, multi-directional networks with clusterable structures.</p></li>
+</ul>
+<h1 id="field-packages">Field packages</h1>
+<p>As an interdisciplinary approach, network analysis is used in a number of fields, where the specific needs and interests of those fields are addressed by particular packages.</p>
+<h2 id="ecological-networks">Ecological networks</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=econetwork">econetwork</a> is a collection of advanced functions to analyze and models of ecological networks (mainly food webs and host-parasite relations, but also plant-pollinator and other mutualistic ones) statically and dynamically (based on Ohlmann et al 2023: <a href="https://doi.org/10.1016/j.ecolmodel.2023.110424">doi:10.1016/j.ecolmodel.2023.110424</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=AnimalHabitatNetwork">AnimalHabitatNetwork</a> provides functions for generating and visualizing networks representing the physical configurations of animal habitats. It implements an original network-generating algorithm based on pair-wise Euclidean distances and can output undirected network either weighted or binary, fully connected or sparse). The package is associated with a PDF on modelling the physical configurations of animal habitats using networks.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=aniSNA">aniSNA</a> allows to obtain network structures from animal GPS telemetry observations and statistically analyze them to assess their adequacy for social network analysis. Methods include pre-network data permutations, bootstrapping techniques to obtain confidence intervals for global and node-level network metrics, and correlation and regression analysis of the local network metrics.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=asnipe">asnipe</a> implements several tools that are used in animal social network analysis to cluster, and generate networks, perform permutation tests, calculate association rates, and perform multiple regression analysis.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ATNr">ATNr</a> estimates <em>allometric trophic models</em> (ATN) for the species biomasses in dynamic food-webs and allows to generate synthetic networks. It also provides access to the ODE solver deSolve.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=BIEN">BIEN</a> allows to access the <em>Botanical Information and Ecology Network Database</em> in R</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=bipartite">bipartite</a> offers functions to visualize food webs and calculate some ecological indices on them.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=cassandRa">cassandRa</a> deals with under-sampling in ecological networks by fitting a variety of statistical models and sample coverage estimators to correct for (likely) missing ties. It works only on bipartite networks.</p></li>
+<li><p><code>pkg("EcoNetGen")</code> to simulate and sample from ecological networks.</p></li>
+<li><p><code>pkg("econullnetr")</code> to carry out null-model analysis for ecological networks.</p></li>
+</ul>
+<h2 id="bibliometric-networks">Bibliometric networks</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=bibliometrix">bibliometrix</a> includes functions to import bibliographic data from the main publication databases online (‘SCOPUS’, ‘Clarivate Analytics Web of Science’, ‘Digital Science Dimensions’, ‘Cochrane Library’, ‘Lens’, and ‘PubMed’). It can also build networks (<code>bibliometrix::biblioNetwork</code>) for co-citation, coupling, scientific collaboration and co-word analysis including their dynamic versions (<code>bibliometrix::histNetwork</code>). It allows to plot the data using <code>VOSviewer.jar</code>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=bibliometrixData">bibliometrixData</a> contains example datasets for testing <code>bibliometrix</code>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=biblionetwork">biblionetwork</a> proposes functions to identify and weight the edges in a bibliometric network. All functions are optimized for large datasets. It implements different methods for different types of relations (based on Perianes-Rodriguez, Waltman, and Van Eck 2016; Leydesdorff and Park 2017):</p>
+<ul>
+<li>co-authorship supports simple counting, (refined) fractional weight with or with cosine normalization.</li>
+<li>bibliographic coupling supports: coupling strength and angle.</li>
+<li>co-citation supports the cosine normalization of count weights.</li>
+</ul></li>
+<li><p><a href="https://CRAN.R-project.org/package=Diderot">Diderot</a> is geared towards the analysis of citation networks using modularity and heterocitation metrics based on Scopus data.</p></li>
+</ul>
+<h2 id="networks-in-the-natural-and-life-sciences">Networks in the natural and life sciences</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=WGCNA">WGCNA</a> focuses on the analysis of weighted correlation networks. It has functions for network construction, modularity computation, gene selection, topological analysis, generating data, plotting, and exports to third-party software. Notably, the underlying data mining approach has been used beyond the natural sciences. There are several packages on Bioconductor that reverse-depend/extend these functionalities.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=c3net">c3net</a> allows to infer gene-regulation networks with direct physical interactions using <code>C3NET</code> (Altay and Emmert-Streib 2010). Other packages implement improvements/variants of this algorithm based on the literature, such as:</p>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=Ac3net">Ac3net</a> Infers directional conservative causal core in gene network based on the algorithm for directional network proposed by Altay (2018).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=bc3net">bc3net</a> implements the BC3NET algorithm for inference on gene-regulation networks (Simoes and Emmert-Streib 2012). In essence it offers a Bayesian approach with noninformative prior to the C3NET algorithm.</p></li>
+</ul></li>
+<li><p><a href="https://CRAN.R-project.org/package=BioNAR">BioNAR</a> implements a detailed topologically based network analysis with functions that create networks based on laboratory-produced meta-data. It includes functions for vertex centrality measure and modularity computation. Additionally, it provides a robust synaptic proteome network for data validation.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=BASiNET">BASiNET</a> and <a href="https://CRAN.R-project.org/package=BASiNETEntropy">BASiNETEntropy</a> provide functions for classifying RNA sequences using network algorithms and notions from information theory.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=bionetdata">bionetdata</a> is a collection of relation datasets of biological and chemical nature.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=Cascade">Cascade</a> includes functions for gene selection, reverse engineering, and prediction in cascade networks.</p></li>
+</ul>
+<h2 id="neurosciences-and-psychology">Neurosciences and psychology</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=NetworkToolbox">NetworkToolbox</a> implements network analysis and graph theory measures used in neuroscience, cognitive science, and psychology. Methods include various filtering methods and approaches such as threshold and dependency. It can also execute some basic operations such as computing centrality of nodes and community or the network’s clustering coefficient.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=qgraph">qgraph</a> provides tools for visualizing and analyzing weighted networks and a Gaussian graphical model for plotting. It is compatible with <a href="https://CRAN.R-project.org/package=igraph">igraph</a> through the <code>qgraph::as.igraph.qgraph</code> function. It is mostly used in psychology and neurosciences.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=HospitalNetwork">HospitalNetwork</a> provides functions to construct a one-mode network of hospitals based on the linked two-mode networks of hospitalized patients’ transfers.</p></li>
+</ul>
+<h2 id="spatial-networks">Spatial networks</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=geonetwork">geonetwork</a> handles networks or graphs whose nodes are locations. The functions includes the creation of objects of class <code>geonetwork</code> as a graph with node coordinates, the computation of network measures, the support of spatial operations (projection to different coordinate reference systems, handling of bounding boxes, etc.) and the plotting of the <code>geonetwork</code> object combined with supplementary cartography for spatial representation. It is compatible with `<a href="https://CRAN.R-project.org/package=igraph">igraph</a>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=chessboard">chessboard</a> provides functions to work with un/directed undirected spatial networks. It allows to create connectivity matrices (<code>chessboard::connectivity_matrix</code>) and exports results to several formats: node list, neighbor list, edge list, connectivity matrix, Eigenvector maps. It also implements connectivity for chess pieces via specific functions: <code>chessboard::bishop</code>, <code>chessboard::knight</code>, <code>chessboard::pawn</code>, <code>chessboard::queen</code>, <code>chessboard::rook</code>, besides introducing two sets of movement rules <code>chessboard::fool</code> and <code>chessboard::wizard</code>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=epanet2toolkit">epanet2toolkit</a> interfaces R with the EPANET (<a href="https://github.com/OpenWaterAnalytics/EPANET">EPANET</a>) programmer’s toolkit to carry out basic (<code>epanet2toolkit::ENepanet</code>) or customized (<code>epanet2toolkit::ENopen</code>) simulations.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=intensitynet">intensitynet</a> includes functions to analyze point patterns in space occurring over planar network structures derived from graph-related intensity measures for un/directed and mixed networks</p></li>
+</ul>
+<h2 id="public-health-networks">Public-health networks</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=epinet">epinet</a> simulates contact networks to predict the transmission of contagious diseases through Bayesian inference.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=hybridModels">hybridModels</a> offers a meta-population model that assigns nodes to sub-populations to better model disease spreading through cluster contagion using stochastic simulation algorithm and an individual-based approach.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=netdiffuseR">netdiffuseR</a> provides functions for calculating network effects such as transmission rate, hazard rates, exposure models, network threshold levels, infectiousness (contagion), and susceptibility.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=EpiModel">EpiModel</a> builds on Statnet’s for epidemic modelling. But more on this field of application can be found in the CRAN TaskView <a href="https://CRAN.R-project.org/view=Epidemiology">Epidemiology</a>.</p></li>
+</ul>
+<h2 id="social-and-economic-networks">Social and economic networks</h2>
+<ul>
+<li><p><a href="https://CRAN.R-project.org/package=sna">sna</a> implements many operations commonly carried out on networks in the social and economic sciences with the ability of regress a network variable on others using ordinary least square, linear network autocorrelation models or a logistic regression (More on this type of applications can be found in the CRAN TaskView <a href="https://CRAN.R-project.org/view=GraphicalModels">GraphicalModels</a>.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=FinNet">FinNet</a> provides classes, methods, and functions to deal with financial networks involving both physical and legal persons. The package assists in creating various types of financial networks: ownership, board interlocks, or both. It support different tie-weighting procedures (valued or binary), and renders them in the most common formats (adjacency matrix, incidence matrix, edge list, <a href="https://CRAN.R-project.org/package=igraph">igraph</a>, <a href="https://CRAN.R-project.org/package=statnet">statnet</a>).</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=ITNr">ITNr</a> gathers functions to clean and process international trade data into an adjacency matrix. It can also extract the network’s backbone, compute centrality, run blockmodels and other clustering procedures, or highlight regional trade patterns.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=modnets">modnets</a> models moderator variables in cross-sectional, temporal, and multi-level networks.</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=multinet">multinet</a> provides functions for the creation/generation and analysis of multi-layer social networks</p></li>
+</ul>
+<h1 id="references">References</h1>
+<ul>
+<li><p>Altay, Gokmen. 2018. ‘Directed Conservative Causal Core Gene Networks’. <em>bioRxiv</em>. <a href="https://doi.org/10.1101/271031">doi:10.1101/271031</a></p></li>
+<li><p>Altay, Gökmen, and Frank Emmert-Streib. 2010. ‘Inferring the Conservative Causal Core of Gene Regulatory Networks’. <em>BMC Systems Biology</em> 4(1): 132. <a href="https://doi.org/10.1186/1752-0509-4-132">doi:10.1186/1752-0509-4-132</a></p></li>
+<li><p>Barbillon, Pierre, Sophie Donnet, Emmanuel Lazega, and Avner Bar-Hen. 2017. ‘Stochastic Block Models for Multiplex Networks: An Application to a Multilevel Network of Researchers’. <em>Journal of the Royal Statistical Society Series A: Statistics in Society</em> 180 (1): 295–314. <a href="https://doi.org/10.1111/rssa.12193">doi:10.1111/rssa.12193</a></p></li>
+<li><p>Bar-Hen, Avner, Pierre Barbillon, and Sophie Donnet. 2022. ‘Block Models for Generalized Multipartite Networks: Applications in Ecology and Ethnobiology’. <em>Statistical Modelling</em> 22 (4): 273–96. <a href="https://doi.org/10.1177/1471082X20963254">doi:10.1177/1471082X20963254</a></p></li>
+<li><p>Batagelj, Vladimir, and Matjaž Zaveršnik. ‘Fast Algorithms for Determining (Generalized) Core Groups in Social Networks’. <em>Advances in Data Analysis and Classification</em> 5, no. 2 (1 July 2011): 129–45. <a href="https://doi.org/10.1007/s11634-010-0079-y">doi:10.1007/s11634-010-0079-y</a></p></li>
+<li><p>Block, Per, Christoph Stadtfeld, and Garry Robins. 2022. ‘A statistical model for the analysis of mobility tables as weighted networks with an application to faculty hiring networks’. <em>Social Networks</em> 68: 264–278. <a href="https://doi.org/10.1016/j.socnet.2021.08.003">doi:10.1016/j.socnet.2021.08.003</a></p></li>
+<li><p>Breiger, Ronald L, Scott A Boorman, and Phipps Arabie. 1975. ‘An Algorithm for Clustering Relational Data with Applications to Social Network Analysis and Comparison with Multidimensional Scaling’. <em>Journal of Mathematical Psychology</em> 12 (3): 328–83. <a href="https://doi.org/10.1016/0022-2496(75)90028-0">doi:10.1016/0022-2496(75)90028-0</a></p></li>
+<li><p>Cao, Xiaocang, Ang Dong, Guangbo Kang, Xiaoli Wang, Liyun Duan, Huixing Hou, Tianming Zhao, et al. 2022. ‘Modeling Spatial Interaction Networks of the Gut Microbiota’. <em>Gut Microbes</em> 14(1): 2106103. <a href="https://doi.org/10.1080/19490976.2022.2106103">doi:10.1080/19490976.2022.2106103</a></p></li>
+<li><p>Chabert-Liddell, Saint-Clair, Pierre Barbillon, Sophie Donnet, and Emmanuel Lazega. 2021. ‘A Stochastic Block Model Approach for the Analysis of Multilevel Networks: An Application to the Sociology of Organizations’. <em>Computational Statistics &amp; Data Analysis</em> 158 (June): 107179. <a href="https://doi.org/10.1016/j.csda.2021.107179">doi:10.1016/j.csda.2021.107179</a></p></li>
+<li><p>Côme, E., Jouvin, N., Latouche, P. et al. 2021. ‘Hierarchical clustering with discrete latent variable models and the integrated classification likelihood’. <em>Adv Data Anal Classif</em> 15: 957–986. <a href="https://doi.org/10.1007/s11634-021-00440-z">doi:10.1007/s11634-021-00440-z</a></p></li>
+<li><p>Cugmas, Marjan, and Aleš Žiberna. 2023. ‘Approaches to Blockmodeling Dynamic Networks: A Monte Carlo Simulation Study’. <em>Social Networks</em> 73 (May): 7–19. <a href="https://doi.org/10.1016/j.socnet.2022.12.003">doi:10.1016/j.socnet.2022.12.003</a></p></li>
+<li><p>Dong, Xu, Luis Castro, and Nazrul Shaikh. 2020. ‘Fastnet: An R Package for Fast Simulation and Analysis of Large-Scale Social Networks’. <em>Journal of Statistical Software</em> 96: 1–23. <a href="https://doi.org/10.18637/jss.v096.i07">doi:10.18637/jss.v096.i07</a></p></li>
+<li><p>Hoff, Peter D. 2009. ‘Multiplicative Latent Factor Models for Description and Prediction of Social Networks’. <em>Computational and Mathematical Organization Theory</em> 15(4): 261–72. <a href="https://doi.org/10.1007/s10588-008-9040-4">doi:10.1007/s10588-008-9040-4</a></p></li>
+<li><p>Hoffman, Marion, Per Block, Timon Elmer, and Christoph Stadtfeld. 2020. ‘A model for the dynamics of face-to-face interactions in social groups’. <em>Network Science</em> 8(S1): S4–S25. <a href="https://doi.org/10.1017/nws.2020.3">doi:10.1017/nws.2020.3</a></p></li>
+<li><p>Hoshino, Tadao, and Takahide Yanagi. “Causal Inference with Noncompliance and Unknown Interference”. <em>arXiv</em>, 22 Octover 2023. https://doi.org/10.48550/arXiv.2108.07455.</p></li>
+<li><p>Kanevsky, Gregory. 2016. ’R Graph Objects: igraph vs. network. <em>R Bloggers</em>. January 30, 2016. https://www.r-bloggers.com/2016/01/r-graph-objects-igraph-vs-network/]</p></li>
+<li><p>Knoke, David, Mario Diani, James Hollway, and Dimitris Christopoulos. 2021. <em>Multimodal Political Networks</em>. Cambridge: Cambridge University Press. <a href="https://doi.org/10.1017/9781108985000">doi:10.1017/9781108985000</a></p></li>
+<li><p>Lafosse, R., and Hanafi, M. 1997. “Concordance d’un tableau avec <span class="math inline"><em>K</em></span> tableaux : définition de <span class="math inline"><em>K</em> + 1</span> uples synthétiques.” <em>Revue de Statistique Appliquée</em> 45(4): 111-126. &lt;http://eudml.org/doc/106424”)`</p></li>
+<li><p>Lazega, Emmanuel, and Tom A.B. Snijders, eds. 2016. <em>Multilevel Network Analysis for the Social Sciences</em>. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-24520-1">doi:10.1007/978-3-319-24520-1</a></p></li>
+<li><p>Leydesdorff, Loet, and Han Woo Park. 2017. ‘Full and Fractional Counting in Bibliometric Networks’. <em>Journal of Informetrics</em> 11(1): 117–20. <a href="https://doi.org/10.1016/j.joi.2016.11.007">doi:10.1016/j.joi.2016.11.007</a></p></li>
+<li><p>Martin, Evan A., and A. Fu. 2019. ‘Approximate Bayesian Inference of Directed Acyclic Graphs in Biology with Flexible Priors on Edge States’. &lt;https://arxiv.org/abs/1909.10678”)`</p></li>
+<li><p>Matias, Catherine, and Vincent Miele. 2017. ‘Statistical Clustering of Temporal Networks through a Dynamic Stochastic Block Model’. <em>Journal of the Royal Statistical Society. Series B (Statistical Methodology)</em> 79 (4): 1119–41. &lt;https://www.jstor.org/stable/26773154”)`</p></li>
+<li><p>Ohlmann, Marc, Catherine Matias, Giovanni Poggiato, Stéphane Dray, Wilfried Thuiller, and Vincent Miele. 2023. ‘Quantifying the Overall Effect of Biotic Interactions on Species Distributions along Environmental Gradients’. <em>Ecological Modelling</em> 483: 110424. <a href="https://doi.org/10.1016/j.ecolmodel.2023.110424">doi:10.1016/j.ecolmodel.2023.110424</a></p></li>
+<li><p>Perianes-Rodriguez, Antonio, Ludo Waltman, and Nees Jan Van Eck. 2016. ‘Constructing Bibliometric Networks: A Comparison between Full and Fractional Counting’. <em>Journal of Informetrics</em> 10(4): 1178–95. <a href="https://doi.org/10.1016/j.joi.2016.10.006">doi:10.1016/j.joi.2016.10.006</a></p></li>
+<li><p>Schoch, David. 2018. ‘Centrality without Indices: Partial rankings and rank Probabilities in networks’. <em>Social Networks</em> 54: 50-60. <a href="https://doi.org/10.1016/j.socnet.2017.12.003">doi:10.1016/j.socnet.2017.12.003</a></p></li>
+<li><p>Simoes, Ricardo de Matos, and Frank Emmert-Streib. 2012. ‘Bagging Statistical Network Inference from Large-Scale Gene Expression Data’. <em>PLOS ONE</em> 7(3): e33624. <a href="https://doi.org/10.1371/journal.pone.0033624">doi:10.1371/journal.pone.0033624</a></p></li>
+<li><p>Škulj, Damjan, and Aleš Žiberna. 2022. ‘Stochastic Blockmodeling of Linked Networks’. <em>Social Networks</em> 70: 240–52. <a href="https://doi.org/10.1016/j.socnet.2022.02.001">doi:10.1016/j.socnet.2022.02.001</a></p></li>
+<li><p>Stadtfeld, Christoph, James Hollway, and Per Block. 2017. ‘Dynamic Network Actor Models: Investigating Coordination Ties through Time’. <em>Sociological Methodology</em> 47(1): 1–40. <a href="https://doi.org/10.1177/0081175017709295">doi:10.1177/0081175017709295</a></p></li>
+<li><p>Warner, Rebecca M., David A. Kenny, and Michael Stoto. 1979. ‘A New Round Robin Analysis of Variance for Social Interaction Data.’ <em>Journal of Personality and Social Psychology</em> 37(10): 1742–57. <a href="https://doi.org/10.1037/0022-3514.37.10.1742">doi:10.1037/0022-3514.37.10.1742</a></p></li>
+<li><p>Žiberna, Aleš. 2020. ‘K-Means-Based Algorithm for Blockmodeling Linked Networks’. <em>Social Networks</em> 61: 153–69. <a href="https://doi.org/10.1016/j.socnet.2019.10.006">doi:10.1016/j.socnet.2019.10.006</a></p></li>
+</ul>
+
+  <h3>CRAN packages</h3>
+  <table>
+    <tr style="vertical-align: top;"><td><i>Core:</i></td><td><a href="https://CRAN.R-project.org/package=igraph">igraph</a>, <a href="https://CRAN.R-project.org/package=manynet">manynet</a>, <a href="https://CRAN.R-project.org/package=network">network</a>, <a href="https://CRAN.R-project.org/package=sna">sna</a>, <a href="https://CRAN.R-project.org/package=statnet">statnet</a>.</td></tr>
+    <tr style="vertical-align: top;"><td><i>Regular:</i></td><td><a href="https://CRAN.R-project.org/package=Ac3net">Ac3net</a>, <a href="https://CRAN.R-project.org/package=amen">amen</a>, <a href="https://CRAN.R-project.org/package=AnimalHabitatNetwork">AnimalHabitatNetwork</a>, <a href="https://CRAN.R-project.org/package=aniSNA">aniSNA</a>, <a href="https://CRAN.R-project.org/package=asnipe">asnipe</a>, <a href="https://CRAN.R-project.org/package=ATNr">ATNr</a>, <a href="https://CRAN.R-project.org/package=backbone">backbone</a>, <a href="https://CRAN.R-project.org/package=BASiNET">BASiNET</a>, <a href="https://CRAN.R-project.org/package=BASiNETEntropy">BASiNETEntropy</a>, <a href="https://CRAN.R-project.org/package=bc3net">bc3net</a>, <a href="https://CRAN.R-project.org/package=bibliometrix">bibliometrix</a>, <a href="https://CRAN.R-project.org/package=bibliometrixData">bibliometrixData</a>, <a href="https://CRAN.R-project.org/package=biblionetwork">biblionetwork</a>, <a href="https://CRAN.R-project.org/package=BIEN">BIEN</a>, <a href="https://CRAN.R-project.org/package=biergm">biergm</a>, <a href="https://CRAN.R-project.org/package=BioNAR">BioNAR</a>, <a href="https://CRAN.R-project.org/package=bionetdata">bionetdata</a>, <a href="https://CRAN.R-project.org/package=bipartite">bipartite</a>, <a href="https://CRAN.R-project.org/package=bipartiteD3">bipartiteD3</a>, <a href="https://CRAN.R-project.org/package=birankr">birankr</a>, <a href="https://CRAN.R-project.org/package=blockmodeling">blockmodeling</a>, <a href="https://CRAN.R-project.org/package=BlockmodelingGUI">BlockmodelingGUI</a>, <a href="https://CRAN.R-project.org/package=blockmodels">blockmodels</a>, <a href="https://CRAN.R-project.org/package=BMConcor">BMConcor</a>, <a href="https://CRAN.R-project.org/package=BoolNet">BoolNet</a>, <a href="https://CRAN.R-project.org/package=bootnet">bootnet</a>, <a href="https://CRAN.R-project.org/package=btergm">btergm</a>, <a href="https://CRAN.R-project.org/package=c3net">c3net</a>, <a href="https://CRAN.R-project.org/package=Cascade">Cascade</a>, <a href="https://CRAN.R-project.org/package=cassandRa">cassandRa</a>, <a href="https://CRAN.R-project.org/package=cencrne">cencrne</a>, <a href="https://CRAN.R-project.org/package=centiserve">centiserve</a>, <a href="https://CRAN.R-project.org/package=chessboard">chessboard</a>, <a href="https://CRAN.R-project.org/package=clustNet">clustNet</a>, <a href="https://CRAN.R-project.org/package=collpcm">collpcm</a>, <a href="https://CRAN.R-project.org/package=concorR">concorR</a>, <a href="https://CRAN.R-project.org/package=dBlockmodeling">dBlockmodeling</a>, <a href="https://CRAN.R-project.org/package=diagram">diagram</a>, <a href="https://CRAN.R-project.org/package=Diderot">Diderot</a>, <a href="https://CRAN.R-project.org/package=dnr">dnr</a>, <a href="https://CRAN.R-project.org/package=dyads">dyads</a>, <a href="https://CRAN.R-project.org/package=dynsbm">dynsbm</a>, <a href="https://CRAN.R-project.org/package=econetwork">econetwork</a>, <a href="https://CRAN.R-project.org/package=edgebundle">edgebundle</a>, <a href="https://CRAN.R-project.org/package=egor">egor</a>, <a href="https://CRAN.R-project.org/package=epanet2toolkit">epanet2toolkit</a>, <a href="https://CRAN.R-project.org/package=EpiModel">EpiModel</a>, <a href="https://CRAN.R-project.org/package=epinet">epinet</a>, <a href="https://CRAN.R-project.org/package=ergm">ergm</a>, <a href="https://CRAN.R-project.org/package=ergm.count">ergm.count</a>, <a href="https://CRAN.R-project.org/package=ergm.ego">ergm.ego</a>, <a href="https://CRAN.R-project.org/package=ergm.multi">ergm.multi</a>, <a href="https://CRAN.R-project.org/package=ergm.rank">ergm.rank</a>, <a href="https://CRAN.R-project.org/package=ergmgp">ergmgp</a>, <a href="https://CRAN.R-project.org/package=ERPM">ERPM</a>, <a href="https://CRAN.R-project.org/package=fastnet">fastnet</a>, <a href="https://CRAN.R-project.org/package=FinNet">FinNet</a>, <a href="https://CRAN.R-project.org/package=geonetwork">geonetwork</a>, <a href="https://CRAN.R-project.org/package=gganimate">gganimate</a>, <a href="https://CRAN.R-project.org/package=ggdendro">ggdendro</a>, <a href="https://CRAN.R-project.org/package=ggforce">ggforce</a>, <a href="https://CRAN.R-project.org/package=ggnetwork">ggnetwork</a>, <a href="https://CRAN.R-project.org/package=ggplot2">ggplot2</a>, <a href="https://CRAN.R-project.org/package=ggraph">ggraph</a>, <a href="https://CRAN.R-project.org/package=ggsom">ggsom</a>, <a href="https://CRAN.R-project.org/package=goldfish">goldfish</a>, <a href="https://CRAN.R-project.org/package=graph">graph</a>, <a href="https://CRAN.R-project.org/package=graphclust">graphclust</a>, <a href="https://CRAN.R-project.org/package=graphlayouts">graphlayouts</a>, <a href="https://CRAN.R-project.org/package=greed">greed</a>, <a href="https://CRAN.R-project.org/package=GREMLINS">GREMLINS</a>, <a href="https://CRAN.R-project.org/package=HospitalNetwork">HospitalNetwork</a>, <a href="https://CRAN.R-project.org/package=hybridModels">hybridModels</a>, <a href="https://CRAN.R-project.org/package=idopNetwork">idopNetwork</a>, <a href="https://CRAN.R-project.org/package=incidentally">incidentally</a>, <a href="https://CRAN.R-project.org/package=intensitynet">intensitynet</a>, <a href="https://CRAN.R-project.org/package=intergraph">intergraph</a>, <a href="https://CRAN.R-project.org/package=ionet">ionet</a>, <a href="https://CRAN.R-project.org/package=ITNr">ITNr</a>, <a href="https://CRAN.R-project.org/package=kmBlock">kmBlock</a>, <a href="https://CRAN.R-project.org/package=latenetwork">latenetwork</a>, <a href="https://CRAN.R-project.org/package=latentnet">latentnet</a>, <a href="https://CRAN.R-project.org/package=lightergm">lightergm</a>, <a href="https://CRAN.R-project.org/package=linkcomm">linkcomm</a>, <a href="https://CRAN.R-project.org/package=localboot">localboot</a>, <a href="https://CRAN.R-project.org/package=lolog">lolog</a>, <a href="https://CRAN.R-project.org/package=Matrix">Matrix</a>, <a href="https://CRAN.R-project.org/package=migraph">migraph</a>, <a href="https://CRAN.R-project.org/package=MLVSBM">MLVSBM</a>, <a href="https://CRAN.R-project.org/package=modnets">modnets</a>, <a href="https://CRAN.R-project.org/package=MoNAn">MoNAn</a>, <a href="https://CRAN.R-project.org/package=multigraph">multigraph</a>, <a href="https://CRAN.R-project.org/package=multinet">multinet</a>, <a href="https://CRAN.R-project.org/package=multinets">multinets</a>, <a href="https://CRAN.R-project.org/package=multiplex">multiplex</a>, <a href="https://CRAN.R-project.org/package=nda">nda</a>, <a href="https://CRAN.R-project.org/package=ndtv">ndtv</a>, <a href="https://CRAN.R-project.org/package=neatmaps">neatmaps</a>, <a href="https://CRAN.R-project.org/package=netClust">netClust</a>, <a href="https://CRAN.R-project.org/package=netdiffuseR">netdiffuseR</a>, <a href="https://CRAN.R-project.org/package=netrankr">netrankr</a>, <a href="https://CRAN.R-project.org/package=networkD3">networkD3</a>, <a href="https://CRAN.R-project.org/package=networkDynamic">networkDynamic</a>, <a href="https://CRAN.R-project.org/package=NetworkToolbox">NetworkToolbox</a>, <a href="https://CRAN.R-project.org/package=oaqc">oaqc</a>, <a href="https://CRAN.R-project.org/package=patchwork">patchwork</a>, <a href="https://CRAN.R-project.org/package=qgraph">qgraph</a>, <a href="https://CRAN.R-project.org/package=relevent">relevent</a>, <a href="https://CRAN.R-project.org/package=rem">rem</a>, <a href="https://CRAN.R-project.org/package=rgraph6">rgraph6</a>, <a href="https://CRAN.R-project.org/package=RGraphViz">RGraphViz</a>, <a href="https://CRAN.R-project.org/package=roughnet">roughnet</a>, <a href="https://CRAN.R-project.org/package=RSiena">RSiena</a>, <a href="https://CRAN.R-project.org/package=sbm">sbm</a>, <a href="https://CRAN.R-project.org/package=signnet">signnet</a>, <a href="https://CRAN.R-project.org/package=snahelper">snahelper</a>, <a href="https://CRAN.R-project.org/package=StochBlock">StochBlock</a>, <a href="https://CRAN.R-project.org/package=tergm">tergm</a>, <a href="https://CRAN.R-project.org/package=tidygraph">tidygraph</a>, <a href="https://CRAN.R-project.org/package=tnet">tnet</a>, <a href="https://CRAN.R-project.org/package=tsna">tsna</a>, <a href="https://CRAN.R-project.org/package=visNetwork">visNetwork</a>, <a href="https://CRAN.R-project.org/package=WGCNA">WGCNA</a>.</td></tr>
+  </table>
+
+
+  <h3>Other resources</h3>
+  <ul>
+    <li>CRAN Task View: <a href="https://CRAN.R-project.org/view=DynamicVisualizations">DynamicVisualizations</a></li>
+    <li>CRAN Task View: <a href="https://CRAN.R-project.org/view=Epidemiology">Epidemiology</a></li>
+    <li>CRAN Task View: <a href="https://CRAN.R-project.org/view=GraphicalModels">GraphicalModels</a></li>
+    <li>Bioconductor Package: <a href="https://www.Bioconductor.org/packages/Rgraphviz">Rgraphviz</a></li>
+    <li>GitHub Project: <a href="https://github.com/d3/d3">d3</a></li>
+    <li>GitHub Project: <a href="https://github.com/egonet/egonet">egonet</a></li>
+    <li>GitHub Project: <a href="https://github.com/OpenWaterAnalytics/EPANET">EPANET</a></li>
+    <li>GitHub Project: <a href="https://github.com/jfaganUK/openeddi">openeddi</a></li>
+    <li>GitHub Project: <a href="https://github.com/rough-stuff/rough">rough</a></li>
+    <li>GitHub Project: <a href="https://github.com/visjs">NA</a></li>
+  </ul>
+
+</body>
+</html>
